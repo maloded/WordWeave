@@ -1,10 +1,8 @@
-import { Counter } from '../../components/Counter';
-
 
 const AboutPage = () => {
   return (
     <div>
-      <Counter />
+      About
     </div>
   );
 };
