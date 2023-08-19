@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import css from './NotFoundPage.module.scss';
 import { useTranslation } from 'react-i18next';
+import css from './NotFoundPage.module.scss';
 
 interface NotFoundPageProps {
   className?: string;
