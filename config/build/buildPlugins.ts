@@ -1,11 +1,17 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import {
-  WebpackPluginInstance, ProgressPlugin, DefinePlugin, HotModuleReplacementPlugin,
+  WebpackPluginInstance,
+  ProgressPlugin,
+  DefinePlugin,
+  HotModuleReplacementPlugin,
 } from 'webpack';
 import { BuildOptions } from './types/config';
 
-export function buildPlugins({ paths, isDev }: BuildOptions): WebpackPluginInstance[] {
+export function buildPlugins({
+  paths,
+  isDev,
+}: BuildOptions): WebpackPluginInstance[] {
   return [
     new ProgressPlugin(),
     new HtmlWebpackPlugin({
