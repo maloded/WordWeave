@@ -1,7 +1,6 @@
 import path from 'path';
 import type webpack from 'webpack';
 import { type BuildPaths } from '../build/types/config';
-import { buildCssLoader } from '../build/loaders/buildCssLoader';
 
 export default ({ config }: { config: webpack.Configuration }): webpack.Configuration => {
   const paths: BuildPaths = {
@@ -25,8 +24,24 @@ export default ({ config }: { config: webpack.Configuration }): webpack.Configur
     });
   }
 
+  const cssLoader = {
+    test: /\.s[ac]ss$/i,
+    use: [
+      {
+        loader: 'css-loader',
+        options: {
+          modules: {
+            auto: (resPath: string) => Boolean(resPath.includes('.module.')),
+            localIdentName: '[path][name]__[local]--[hash:base64:5]',
+          },
+        },
+      },
+      'sass-loader',
+    ],
+  };
+
   config?.module?.rules?.push({ test: /\.svg$/, use: ['@svgr/webpack'] });
-  config?.module?.rules?.push(buildCssLoader(true));
+  config?.module?.rules?.push(cssLoader);
 
   // config?.plugins?.push(
   //     new DefinePlugin({
