@@ -27,6 +27,7 @@ export default ({ config }: { config: webpack.Configuration }): webpack.Configur
   const cssLoader = {
     test: /\.s[ac]ss$/i,
     use: [
+      'style-loader',
       {
         loader: 'css-loader',
         options: {
