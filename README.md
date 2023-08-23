@@ -1,1 +1,1 @@
-# WordWeave
+# WordWeave app
