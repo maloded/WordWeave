@@ -1,5 +1,6 @@
 import path from 'path';
 import type webpack from 'webpack';
+import { DefinePlugin } from 'webpack';
 import { type BuildPaths } from '../build/types/config';
 
 export default ({ config }: { config: webpack.Configuration }): webpack.Configuration => {
@@ -44,12 +45,9 @@ export default ({ config }: { config: webpack.Configuration }): webpack.Configur
   config?.module?.rules?.push({ test: /\.svg$/, use: ['@svgr/webpack'] });
   config?.module?.rules?.push(cssLoader);
 
-  // config?.plugins?.push(
-  //     new DefinePlugin({
-  //         __IS_DEV__: JSON.stringify(true),
-  //         __API__: JSON.stringify('')
-  //     })
-  // );
+  config?.plugins?.push(new DefinePlugin({
+    __IS_DEV__: true,
+  }));
 
   return config;
 };

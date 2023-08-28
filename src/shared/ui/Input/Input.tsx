@@ -75,7 +75,7 @@ export const Input = memo((props: InputProps) => {
         {isFocused && (
           <span
             className={css.caret}
-            style={{ left: `${caretPosition * 7}px` }}
+            style={{ left: `${caretPosition * 6}px` }}
           />
         )}
       </div>

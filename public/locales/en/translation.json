@@ -8,5 +8,8 @@
   "Refresh page": "Refresh page",
   "Log in": "Log in",
   "Your username": "Your username",
-  "Your password": "Your password"
+  "Your password": "Your password",
+  "Form authorization": "Form authorization",
+  "Incorrect username or password": "Incorrect username or password",
+  "Log out": "Log out"
 }

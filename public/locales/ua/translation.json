@@ -8,5 +8,8 @@
   "Refresh page": "Обновити сторінку",
   "Log in": "Вхід",
   "Your username": "Ваше ім'я користувача",
-  "Your password": "Ваш пароль"
+  "Your password": "Ваш пароль",
+  "Form authorization": "Форма авторизації",
+  "Incorrect username or password": "Невірне ім'я користувача або пароль",
+  "Log out": "Вийти у вікно"
 }
