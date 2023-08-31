@@ -26,6 +26,13 @@
     }
   ],
   "profile": {
-    "name": "typicode"
+    "first": "Oleksii",
+    "lastname": "Ded",
+    "age": 26,
+    "currency": "GRN",
+    "country": "Ukrain",
+    "city": "Kiev",
+    "username": "admin",
+    "avatar": "https://as2.ftcdn.net/v2/jpg/01/74/35/41/1000_F_174354171_dxcNdq4XMmARKT7E88NOLmdrv6BBSAww.jpg"
   }
 }
