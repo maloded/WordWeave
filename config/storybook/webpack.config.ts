@@ -11,8 +11,8 @@ export default ({ config }: { config: webpack.Configuration }): webpack.Configur
     src: path.resolve(__dirname, '..', '..', 'src'),
   };
 
-  config.resolve?.modules?.push(paths.src);
-  config.resolve?.extensions?.push('.ts', '.tsx');
+  config!.resolve!.modules!.push(paths.src);
+  config!.resolve!.extensions!.push('.ts', '.tsx');
 
   if (config?.module?.rules) {
     // eslint-disable-next-line no-param-reassign
@@ -42,10 +42,10 @@ export default ({ config }: { config: webpack.Configuration }): webpack.Configur
     ],
   };
 
-  config?.module?.rules?.push({ test: /\.svg$/, use: ['@svgr/webpack'] });
-  config?.module?.rules?.push(cssLoader);
+  config!.module!.rules!.push({ test: /\.svg$/, use: ['@svgr/webpack'] });
+  config!.module!.rules!.push(cssLoader);
 
-  config?.plugins?.push(new DefinePlugin({
+  config!.plugins!.push(new DefinePlugin({
     __IS_DEV__: JSON.stringify(true),
     __API__: JSON.stringify(''),
   }));

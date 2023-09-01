@@ -1,6 +1,7 @@
 {
   "About": "About",
   "About page": "About page",
+  "Edit profile": "Edit profile",
   "Form authorization": "Form authorization",
   "Incorrect username or password": "Incorrect username or password",
   "Lang": "Lang",
@@ -9,8 +10,11 @@
   "Main": "Main",
   "Main page": "Main page",
   "Not found": "Not found",
+  "Profile": "Profile",
   "Refresh page": "Refresh page",
   "Somthing went wrong": "Somthing went wrong",
+  "Your lastname": "Your lastname",
+  "Your name": "Your name",
   "Your password": "Your password",
   "Your username": "Your username"
 }
