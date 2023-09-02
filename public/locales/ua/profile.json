@@ -2,5 +2,15 @@
   "Edit profile": "Редагувати профіль",
   "Profile": "Профіль",
   "Your name": "Ваше ім'я",
-  "Your lastname": "Ваша фамілія"
+  "Your lastname": "Ваша фамілія",
+  "Somthing went wrong with loading profile": "Щось пішло не так зі завантаженням профілю",
+  "Try refreshing the page": "Попробуйте перезавантажити сторінку",
+  "Cancel": "Відмінити",
+  "Save": "Зберегти",
+  "Your Sity": "Ваше місто",
+  "Your age": "Ваш вік",
+  "Your avatar": "Ваш аватар",
+  "Your username": "Ваше ім'я користувача",
+  "Your currency": "Ваша валюта",
+  "Your country": "Ваше місто"
 }

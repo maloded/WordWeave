@@ -1,6 +1,16 @@
 {
   "Edit profile": "Edit profile",
   "Profile": "Profile",
+  "Somthing went wrong with loading profile": "Somthing went wrong with loading profile",
+  "Try refreshing the page": "Try refreshing the page",
+  "Cancel": "Cancel",
+  "Save": "Save",
+  "Your Sity": "Your Sity",
+  "Your age": "Your age",
+  "Your avatar": "Your avatar",
+  "Your lastname": "Your lastname",
   "Your name": "Your name",
-  "Your lastname": "Your lastname"
+  "Your username": "Your username",
+  "Your currency": "Your currency",
+  "Your country": "Your country"
 }
