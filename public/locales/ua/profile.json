@@ -12,5 +12,10 @@
   "Your avatar": "Ваш аватар",
   "Your username": "Ваше ім'я користувача",
   "Your currency": "Ваша валюта",
-  "Your country": "Ваше місто"
+  "Your country": "Ваше місто",
+  "INCORRECT_USER_DATA": "Неправильні дані користувача",
+  "INCORRECT_AGE": "Неправильний вік",
+  "INCORRECT_COUNTRY": "Неправильна країна",
+  "NO_DATA": "Відсутні дані",
+  "SERVER_ERROR": "Помилка сервера"
 }

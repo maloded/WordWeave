@@ -5,13 +5,15 @@ import {
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import {
   ProfileCard, fetchProfileData, getProfileReadonly, profileActions, profileReducer,
-  getProfileIsLoading, getProfileForm, getProfileError,
+  getProfileIsLoading, getProfileForm, getProfileError, getProfileValidateErrors,
 } from 'entity/Profile';
 import { useCallback, useEffect } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { Currency } from 'entity/Currency';
 import { Country } from 'entity/Country';
+import { Text, TextTheme } from 'shared/ui/Text/Text';
+import { useTranslation } from 'react-i18next';
 import { ProfileHeader } from './ProfileHeader/ProfileHeader';
 
 const reducers: ReducersList = {
@@ -27,10 +29,13 @@ const ProfilePage = (props: ProfilePageProps) => {
     className,
   } = props;
 
+  const { t } = useTranslation('profile');
+
   const formData = useSelector(getProfileForm);
   const isLoading = useSelector(getProfileIsLoading);
   const error = useSelector(getProfileError);
   const readonly = useSelector(getProfileReadonly);
+  const validateErrors = useSelector(getProfileValidateErrors);
 
   const dispatch = useAppDispatch();
 
@@ -92,6 +97,13 @@ const ProfilePage = (props: ProfilePageProps) => {
         <ProfileHeader
           readonly={readonly}
         />
+        {validateErrors?.length && validateErrors.map((err) => (
+          <Text
+            key={err}
+            theme={TextTheme.ERROR}
+            text={t(err)}
+          />
+        ))}
         <ProfileCard
           data={formData}
           isLoading={isLoading}
