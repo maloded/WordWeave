@@ -63,6 +63,14 @@ export const OutlineDark: Story = {
   },
 };
 
+export const OutlineGreen: Story = {
+  decorators: [ThemeDecorator(Theme.GREEN)],
+  args: {
+    children: 'Text',
+    theme: ButtonTheme.OUTLINE,
+  },
+};
+
 export const OutlineRed: Story = {
   args: {
     children: 'Text',

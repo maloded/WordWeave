@@ -24,6 +24,18 @@ export const LightAuth: Story = {
   args: {},
 };
 
+export const GreenAuth: Story = {
+  decorators: [
+    ThemeDecorator(Theme.GREEN),
+    StoreDecorator({
+      user: {
+        authData: {},
+      },
+    }),
+  ],
+  args: {},
+};
+
 export const DarkNoAuth: Story = {
   decorators: [
     ThemeDecorator(Theme.DARK),

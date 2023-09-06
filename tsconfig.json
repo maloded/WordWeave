@@ -26,6 +26,7 @@
     "./config/**/*.ts",
     "./config/**/*.tsx",
     "./src/**/*.ts",
-    "./src/**/*.tsx"
-, "src/features/AuthByUsername/model/selectors/getLoginError"  ]
+    "./src/**/*.tsx",
+    "src/features/AuthByUsername/model/selectors/getLoginError"
+  ]
 }

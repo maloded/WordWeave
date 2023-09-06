@@ -1,9 +1,14 @@
 :root,
 .app_light {
   --bg-color: rgb(188 237 226);
+  --bg-code-color: rgb(183 183 204);
   --inverted-bg-color: rgb(12 12 82);
   --primary-color: rgb(12 12 82);
   --secondary-color: rgb(44 44 125);
   --inverted-primary-color: rgb(162 240 224);
   --inverted-secondary-color: rgb(194 221 215);
+
+  // skeleton
+  --skeleton-shadow: rgba(0 0 0 / 20%);
+  --skeleton-color: #fff;
 }

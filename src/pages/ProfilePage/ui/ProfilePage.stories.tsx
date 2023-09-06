@@ -50,3 +50,21 @@ export const Dark: Story = {
   })],
   args: {},
 };
+
+export const Green: Story = {
+  decorators: [ThemeDecorator(Theme.GREEN), StoreDecorator({
+    profile: {
+      form: {
+        username: 'admin',
+        age: 27,
+        country: Country.GERMANY,
+        currency: Currency.EUR,
+        city: 'Berlin',
+        lastname: 'Ded',
+        first: 'Dedushka',
+        avatar: undefined,
+      },
+    },
+  })],
+  args: {},
+};

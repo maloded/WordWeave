@@ -1,9 +1,14 @@
 :root,
 .app_dark {
   --bg-color: rgb(12 12 82);
+  --bg-code-color: #1515ad;
   --inverted-bg-color: rgb(188 237 226);
   --primary-color: rgb(162 240 224);
   --secondary-color: rgb(194 221 215);
   --inverted-primary-color: rgb(12 12 82);
   --inverted-secondary-color: rgb(44 44 125);
+
+  // skeleton
+  --skeleton-shadow: #2b2be8;
+  --skeleton-color: #1515ad;
 }

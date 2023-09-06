@@ -26,3 +26,11 @@ export const Dark: Story = {
     value: 'Text',
   },
 };
+
+export const Green: Story = {
+  decorators: [ThemeDecorator(Theme.GREEN)],
+  args: {
+    placeholder: 'Введите текст',
+    value: 'Text',
+  },
+};

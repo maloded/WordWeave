@@ -23,6 +23,11 @@ export const Dark: Story = {
   args: {},
 };
 
+export const Green: Story = {
+  decorators: [ThemeDecorator(Theme.GREEN), StoreDecorator({})],
+  args: {},
+};
+
 export const AuthNavbar: Story = {
   decorators: [StoreDecorator({
     user: { authData: {} },

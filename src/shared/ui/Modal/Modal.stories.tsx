@@ -32,3 +32,14 @@ export const PrimaryDark: Story = {
       similique dolores cupiditate modi iure assumenda provident, ipsam quaerat.`,
   },
 };
+
+export const PrimaryGreen: Story = {
+  decorators: [ThemeDecorator(Theme.GREEN)],
+  args: {
+    isOpen: true,
+    children: `Lorem ipsum, dolor sit amet consectetur adipisicing elit
+      Soluta quaerat voluptate voluptatem. Aliquam id culpa totam cupiditate 
+      repellat vitae quo veritatis molestias consequatur at rem nobis neque 
+      similique dolores cupiditate modi iure assumenda provident, ipsam quaerat.`,
+  },
+};

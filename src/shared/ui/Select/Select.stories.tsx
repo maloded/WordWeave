@@ -32,3 +32,14 @@ export const Dark: Story = {
     ],
   },
 };
+
+export const Green: Story = {
+  decorators: [ThemeDecorator(Theme.GREEN)],
+  args: {
+    label: 'Country',
+    options: [
+      { value: '111', content: 'first' },
+      { value: '222', content: 'second' },
+    ],
+  },
+};

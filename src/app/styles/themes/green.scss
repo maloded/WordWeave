@@ -1,9 +1,14 @@
 :root,
 .app_green {
   --bg-color: #f8faf5;
+  --bg-code-color: #c4f373;
   --inverted-bg-color: #415321;
   --primary-color: #203716;
   --secondary-color: #283716;
   --inverted-primary-color: #f8faf5;
   --inverted-secondary-color: #f4faeb;
+
+  // skeleton
+  --skeleton-shadow: #3d4f28;
+  --skeleton-color: #415321;
 }
