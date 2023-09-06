@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { useCallback } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { profileActions, updateProfileData } from 'entity/Profile';
-import css from './ProfileHeader.module.scss';
+import cls from './ProfileHeader.module.scss';
 
 interface ProfileHeaderProps {
   className?: string;
@@ -35,12 +35,12 @@ export const ProfileHeader = (props: ProfileHeaderProps) => {
   }, [dispatch]);
 
   return (
-    <div className={classNames(css.ProfileHeader, {}, [className])}>
+    <div className={classNames(cls.ProfileHeader, {}, [className])}>
       <Text title={t('Profile')} />
       {readonly
         ? (
           <Button
-            className={css.editBtn}
+            className={cls.editBtn}
             theme={ButtonTheme.OUTLINE}
             onClick={onEdit}
           >
@@ -50,14 +50,14 @@ export const ProfileHeader = (props: ProfileHeaderProps) => {
         : (
           <>
             <Button
-              className={css.editBtn}
+              className={cls.editBtn}
               theme={ButtonTheme.OUTLINE_RED}
               onClick={onCancelEdit}
             >
               {t('Cancel')}
             </Button>
             <Button
-              className={css.saveBtn}
+              className={cls.saveBtn}
               theme={ButtonTheme.OUTLINE}
               onClick={onSaveEdit}
             >

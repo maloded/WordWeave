@@ -5,7 +5,7 @@ import { memo, useCallback, useState } from 'react';
 import { LoginModal } from 'features/AuthByUsername';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserAuthData, userActions } from 'entity/User';
-import css from './Navbar.module.scss';
+import cls from './Navbar.module.scss';
 
 interface NavbarProps {
   className?: string;
@@ -31,10 +31,10 @@ export const Navbar = memo(({ className }: NavbarProps) => {
 
   if (authData) {
     return (
-      <div className={classNames(css.Navbar, {}, [className])}>
+      <div className={classNames(cls.Navbar, {}, [className])}>
         <Button
           theme={ButtonTheme.CLEAR_INVERTED}
-          className={css.links}
+          className={cls.links}
           onClick={onLogout}
         >
           {t('Log out')}
@@ -44,10 +44,10 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   }
 
   return (
-    <div className={classNames(css.Navbar, {}, [className])}>
+    <div className={classNames(cls.Navbar, {}, [className])}>
       <Button
         theme={ButtonTheme.CLEAR_INVERTED}
-        className={css.links}
+        className={cls.links}
         onClick={onShowModal}
       >
         {t('Log in')}

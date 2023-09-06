@@ -16,7 +16,7 @@ import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLo
 import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLoginUsername';
 import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword';
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
-import css from './LoginForm.module.scss';
+import cls from './LoginForm.module.scss';
 
 export interface LoginFormProps {
   className?: string;
@@ -58,12 +58,12 @@ const LoginForm = memo((props: LoginFormProps) => {
 
   return (
     <DynamicModuleLoader reducers={initialReducers}>
-      <div className={classNames(css.LoginForm, {}, [className])}>
+      <div className={classNames(cls.LoginForm, {}, [className])}>
         <Text title={t('Form authorization')} />
         {error && <Text text={t('Incorrect username or password')} theme={TextTheme.ERROR} />}
         <Input
           type=""
-          className={css.input}
+          className={cls.input}
           placeholder={t('Your username')}
           autofocus
           onChange={onChangeUsername}
@@ -71,13 +71,13 @@ const LoginForm = memo((props: LoginFormProps) => {
         />
         <Input
           type=""
-          className={css.input}
+          className={cls.input}
           placeholder={t('Your password')}
           onChange={onChangePassword}
           value={password}
         />
         <Button
-          className={css.loginBtn}
+          className={cls.loginBtn}
           theme={ButtonTheme.OUTLINE}
           onClick={onLoginClick}
           disabled={isLoading}

@@ -5,7 +5,7 @@ import { LangSwitcher } from 'widgets/LangSwitcher';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
 import { SidebarItemsList } from '../../model/items';
-import css from './Sidebar.module.scss';
+import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
   className?: string;
@@ -22,8 +22,8 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
     <div
       data-testid="sidebar"
       className={classNames(
-        css.Sidebar,
-        { [css.collapsed]: collapsed },
+        cls.Sidebar,
+        { [cls.collapsed]: collapsed },
         [className],
       )}
     >
@@ -31,7 +31,7 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
         data-testid="sidebar-toggle"
         type="button"
         onClick={onToggle}
-        className={css.collapseBtn}
+        className={cls.collapseBtn}
         theme={ButtonTheme.BACKGROUND_INVERTED}
         size={ButtonSize.L}
         square
@@ -39,7 +39,7 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
         {collapsed ? '>' : '<'}
       </Button>
 
-      <div className={css.items}>
+      <div className={cls.items}>
         {SidebarItemsList.map((item) => (
           <SidebarItem
             item={item}
@@ -49,9 +49,9 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
         ))}
       </div>
 
-      <div className={css.switchers}>
+      <div className={cls.switchers}>
         <ThemeSwitcher />
-        <LangSwitcher className={css.lang} short={collapsed} />
+        <LangSwitcher className={cls.lang} short={collapsed} />
       </div>
     </div>
   );

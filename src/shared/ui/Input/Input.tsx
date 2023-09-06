@@ -2,7 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import {
   InputHTMLAttributes, ChangeEvent, memo, useEffect, useRef, useState,
 } from 'react';
-import css from './Input.module.scss';
+import cls from './Input.module.scss';
 
 type HTMLInputProps = Omit<
   InputHTMLAttributes<HTMLInputElement>,
@@ -59,21 +59,21 @@ export const Input = memo((props: InputProps) => {
   };
 
   return (
-    <div className={classNames(css.Input, { [css.readonly]: readonly }, [className])}>
+    <div className={classNames(cls.Input, { [cls.readonly]: readonly }, [className])}>
       {placeholder && (
         <div
-          className={css.placeholder}
+          className={cls.placeholder}
         >
           {`${placeholder}>`}
         </div>
       )}
-      <div className={css.caretWrapper}>
+      <div className={cls.caretWrapper}>
         <input
           ref={ref}
           type={type}
           value={value}
           onChange={onChangeHangler}
-          className={css.input}
+          className={cls.input}
           onFocus={onFocus}
           onBlur={onBlur}
           onSelect={onSelect}
@@ -82,7 +82,7 @@ export const Input = memo((props: InputProps) => {
         />
         {isCaretVisible && (
           <span
-            className={css.caret}
+            className={cls.caret}
             style={{ left: `${caretPosition * 6}px` }}
           />
         )}

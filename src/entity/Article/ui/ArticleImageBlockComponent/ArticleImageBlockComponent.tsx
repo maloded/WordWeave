@@ -1,8 +1,8 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
 import { Text, TextAlign } from 'shared/ui/Text/Text';
-import css from './ArticleImageBlockComponent.module.scss';
 import { ArticleImageBlock } from '../../model/types/article';
+import cls from './ArticleImageBlockComponent.module.scss';
 
 interface ArticleImageBlockComponentProps {
   className?: string;
@@ -16,9 +16,9 @@ export const ArticleImageBlockComponent = memo((props: ArticleImageBlockComponen
   } = props;
 
   return (
-    <div className={classNames(css.ArticleImageBlockComponent, {}, [className])}>
+    <div className={classNames(cls.ArticleImageBlockComponent, {}, [className])}>
       <img
-        className={css.img}
+        className={cls.img}
         alt={block.title}
         src={block.src}
       />
