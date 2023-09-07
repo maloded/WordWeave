@@ -7,13 +7,15 @@ import {
   ProfileCard, fetchProfileData, getProfileReadonly, profileActions, profileReducer,
   getProfileIsLoading, getProfileForm, getProfileError, getProfileValidateErrors,
 } from 'entity/Profile';
-import { useCallback, useEffect } from 'react';
+import { useCallback } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { Currency } from 'entity/Currency';
 import { Country } from 'entity/Country';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect';
+import { useParams } from 'react-router-dom';
 import { ProfileHeader } from './ProfileHeader/ProfileHeader';
 
 const reducers: ReducersList = {
@@ -30,6 +32,7 @@ const ProfilePage = (props: ProfilePageProps) => {
   } = props;
 
   const { t } = useTranslation('profile');
+  const { id } = useParams<{ id: string }>();
 
   const formData = useSelector(getProfileForm);
   const isLoading = useSelector(getProfileIsLoading);
@@ -39,11 +42,11 @@ const ProfilePage = (props: ProfilePageProps) => {
 
   const dispatch = useAppDispatch();
 
-  useEffect(() => {
-    if (__PROJECT__ !== 'storybook') {
-      dispatch(fetchProfileData());
+  useInitialEffect(() => {
+    if (id) {
+      dispatch(fetchProfileData(id));
     }
-  }, [dispatch]);
+  });
 
   const onChangeFirstname = useCallback((value?: string) => {
     dispatch(profileActions.updateProfile({

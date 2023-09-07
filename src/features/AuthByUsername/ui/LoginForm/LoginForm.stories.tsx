@@ -32,6 +32,16 @@ export const Dark: Story = {
   args: {},
 };
 
+export const Green: Story = {
+  decorators: [ThemeDecorator(Theme.GREEN), StoreDecorator({
+    loginForm: {
+      username: 'test username',
+      password: 'test password',
+    },
+  })],
+  args: {},
+};
+
 export const WithError: Story = {
   decorators: [StoreDecorator({
     loginForm: {

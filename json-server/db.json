@@ -101,6 +101,12 @@
       "text": "It doesn't sucks!",
       "articleId": "1",
       "userId": "2"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "Great article",
+      "id": "6_jtq8B"
     }
   ],
   "users": [
@@ -119,14 +125,28 @@
       "avatar": "http://zornet.ru/_fr/90/1942736.jpg"
     }
   ],
-  "profile": {
-    "first": "Oleksii",
-    "lastname": "Ded",
-    "age": 26,
-    "currency": "USD",
-    "country": "USA",
-    "city": "Kiev",
-    "username": "admin",
-    "avatar": "https://images.unsplash.com/photo-1494959764136-6be9eb3c261e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Oleksii",
+      "lastname": "Ded",
+      "age": 26,
+      "currency": "USD",
+      "country": "USA",
+      "city": "Kiev",
+      "username": "admin",
+      "avatar": "https://images.unsplash.com/photo-1494959764136-6be9eb3c261e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+    },
+    {
+      "id": "2",
+      "first": "Dima",
+      "lastname": "Dom",
+      "age": 22,
+      "currency": "GRN",
+      "country": "Ukraine",
+      "city": "Dnipro",
+      "username": "user",
+      "avatar": "http://zornet.ru/_fr/90/1942736.jpg"
+    }
+  ]
 }

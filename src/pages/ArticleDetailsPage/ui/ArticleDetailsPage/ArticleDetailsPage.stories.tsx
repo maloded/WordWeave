@@ -56,6 +56,26 @@ export const Light: Story = {
       articleDetails: {
         data: article,
       },
+      user: {
+        authData: {
+          id: '1',
+          username: 'admin',
+        },
+      },
+      articleDetailsComments: {
+        entities: {
+          1: {
+            id: '1',
+            user: {
+              id: '1',
+              username: 'admin',
+            },
+            text: 'Great',
+          },
+        },
+        ids: ['1'],
+        isLoading: true,
+      },
     }),
   ],
   args: {},

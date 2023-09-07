@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { memo } from 'react';
+import { memo, useCallback } from 'react';
 import { ArticleDetails } from 'entity/Article';
 import { useParams } from 'react-router-dom';
 import { Text } from 'shared/ui/Text/Text';
@@ -15,6 +15,8 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import {
   fetchCommentsByArticleId,
 } from 'pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId';
+import { AddCommentForm } from 'features/AddCommentForm';
+import { addCommentForArticle } from 'pages/ArticleDetailsPage/model/services/addCommentForArticle';
 import {
   getArticleCommentsIsLoading,
 } from '../../model/selectors/comments';
@@ -43,6 +45,10 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
   const isLoading = useSelector(getArticleCommentsIsLoading);
   const dispatch = useAppDispatch();
 
+  const onSendComment = useCallback((text: string) => {
+    dispatch(addCommentForArticle(text));
+  }, [dispatch]);
+
   useInitialEffect(() => {
     dispatch(fetchCommentsByArticleId(id));
   });
@@ -63,6 +69,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
           className={cls.commentTitle}
           title={t('Comments')}
         />
+        <AddCommentForm onSendComment={onSendComment} />
         <CommentList isLoading={isLoading} comments={comments} />
       </div>
     </DynamicModuleLoader>
