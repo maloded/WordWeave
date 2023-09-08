@@ -1,3 +1,5 @@
+import { User } from '../../../User/model/types/userSchema';
+
 export enum ArticleBlockType {
   IMAGE = 'IMAGE',
   CODE = 'CODE',
@@ -34,9 +36,15 @@ export enum ArticleType {
   ECONOMIC = 'Economic',
 }
 
+export enum ArticleView {
+  BIG = 'BIG',
+  SMALL = 'SMALL',
+}
+
 export interface Article {
   id: string;
   title: string;
+  user: User;
   subtitle: string;
   img: string;
   views: number;

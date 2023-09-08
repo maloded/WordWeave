@@ -12,6 +12,11 @@ const article: Article = {
   img: 'https://makeanapplike.com/wp-content/uploads/2022/02/Node-JS-trends-2022.jpg',
   views: 1033,
   createdAt: '04.09.2023',
+  user: {
+    id: '1',
+    username: 'admin',
+    avatar: 'http://zornet.ru/_fr/90/1942736.jpg',
+  },
   type: [
     ArticleType.IT,
   ],
