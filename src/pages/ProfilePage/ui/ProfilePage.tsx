@@ -16,6 +16,7 @@ import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect';
 import { useParams } from 'react-router-dom';
+import { Page } from 'shared/ui/Page/Page';
 import { ProfileHeader } from './ProfileHeader/ProfileHeader';
 
 const reducers: ReducersList = {
@@ -98,7 +99,7 @@ const ProfilePage = (props: ProfilePageProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames('', {}, [className])}>
+      <Page className={classNames('', {}, [className])}>
         <ProfileHeader
           readonly={readonly}
         />
@@ -123,7 +124,7 @@ const ProfilePage = (props: ProfilePageProps) => {
           onChangeCountry={onChangeCountry}
           onChangeCurrency={onChangeCurrency}
         />
-      </div>
+      </Page>
     </DynamicModuleLoader>
 
   );

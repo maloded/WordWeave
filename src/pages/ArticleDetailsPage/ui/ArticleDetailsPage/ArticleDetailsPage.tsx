@@ -17,6 +17,7 @@ import {
 } from 'pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId';
 import { AddCommentForm } from 'features/AddCommentForm';
 import { addCommentForArticle } from 'pages/ArticleDetailsPage/model/services/addCommentForArticle';
+import { Page } from 'shared/ui/Page/Page';
 import {
   getArticleCommentsIsLoading,
 } from '../../model/selectors/comments';
@@ -55,15 +56,15 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 
   if (!id) {
     return (
-      <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+      <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         {t('Article is not found')}
-      </div>
+      </Page>
     );
   }
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames('', {}, [className])}>
+      <Page className={classNames('', {}, [className])}>
         <ArticleDetails id={id} />
         <Text
           className={cls.commentTitle}
@@ -71,7 +72,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
         />
         <AddCommentForm onSendComment={onSendComment} />
         <CommentList isLoading={isLoading} comments={comments} />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   );
 };
