@@ -2,6 +2,8 @@
   "About": "About",
   "About page": "About page",
   "Article is not found": "Article is not found",
+  "B": "B",
+  "Back to list": "Back to list",
   "Cancel": "Cancel",
   "Comments": "Comments",
   "Comments are missing": "Comments are missing",
@@ -34,5 +36,6 @@
   "Your lastname": "Your lastname",
   "Your name": "Your name",
   "Your password": "Your password",
-  "Your username": "Your username"
+  "Your username": "Your username",
+  "Назад к списку": "Назад к списку"
 }
