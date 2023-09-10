@@ -4,6 +4,7 @@ import {
 import { counterReducer } from 'entity/Counter';
 import { userReducer } from 'entity/User';
 import { $api } from 'shared/api/api';
+import { pageReducer } from 'widgets/Page';
 import { StateSchema, ThunkExtraArg } from './StateSchema';
 import { createReducerManager } from './reducerManager';
 
@@ -15,6 +16,7 @@ export function createReduxStore(
     ...asyncReducers,
     counter: counterReducer,
     user: userReducer,
+    page: pageReducer,
   };
 
   const reducerManager = createReducerManager(rootReducers);
