@@ -8,6 +8,7 @@
   "Not found": "Сторінка не знайдена",
   "Somthing went wrong": "Щось пішло не так, як було задумано",
   "Refresh page": "Обновити сторінку",
+  "Articles were not found": "Статті не знайдені",
   "Log in": "Вхід",
   "Your username": "Ваше ім'я користувача",
   "Your password": "Ваш пароль",
@@ -16,5 +17,18 @@
   "Log out": "Вийти",
   "Comments are missing": "Коментарії є відсутні",
   "Leave your comment here": "Залиште Ваш коментарій тут",
-  "Send": "Відправити"
+  "Send": "Відправити",
+  "Sort by": "Сортувати по",
+  "By": "у",
+  "Search": "Пошук",
+  "created at": "створенню",
+  "title": "заголовку",
+  "views": "переглядам",
+  "ascending": "зростаючому порядку",
+  "descending": "спадаючому порядку",
+  "All": "Усе разом",
+  "IT": "Айті",
+  "Financial": "Фінанси",
+  "Science": "Наука",
+  "Economic": "Економіка"
 }

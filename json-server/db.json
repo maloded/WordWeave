@@ -94,12 +94,10 @@
       "subtitle": "Top JS trends you should follow in 2023",
       "img": "https://c8.alamy.com/comp/T7XT3E/black-and-white-alphabet-letter-js-j-s-logo-icon-design-for-a-company-or-business-T7XT3E.jpg",
       "views": 22033,
-      "createdAt": "09.09.2023",
+      "createdAt": "10.09.2023",
       "userId": "2",
       "type": [
-        "Javascrip Fails",
-        "IT",
-        "Bad news"
+        "IT"
       ],
       "blocks": [
         {
@@ -167,7 +165,7 @@
       "subtitle": "Top JS trends you should follow in 2023",
       "img": "https://i.ytimg.com/vi/umVoV4ak0HA/maxresdefault.jpg",
       "views": 1033,
-      "createdAt": "04.09.2023",
+      "createdAt": "03.09.2023",
       "userId": "1",
       "type": [
         "IT"
@@ -239,11 +237,11 @@
     },
     {
       "id": "10",
-      "title": "Javascrip Trends",
+      "title": "Node Trends",
       "subtitle": "Top JS trends you should follow in 2023",
-      "img": "https://makeanapplike.com/wp-content/uploads/2022/02/Node-JS-trends-2022.jpg",
-      "views": 1033,
-      "createdAt": "04.09.2023",
+      "img": "https://dan-it.com.ua/wp-content/uploads/2023/02/node_js_ch-250x184.png",
+      "views": 533,
+      "createdAt": "02.09.2023",
       "userId": "1",
       "type": [
         "IT"
@@ -263,14 +261,14 @@
     },
     {
       "id": "11",
-      "title": "Javascrip Trends",
+      "title": "Rust Trends",
       "subtitle": "Top JS trends you should follow in 2023",
-      "img": "https://i.ytimg.com/vi/umVoV4ak0HA/maxresdefault.jpg",
-      "views": 1033,
-      "createdAt": "04.09.2023",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Rust_programming_language_black_logo.svg/80px-Rust_programming_language_black_logo.svg.png",
+      "views": 22,
+      "createdAt": "02.09.2023",
       "userId": "1",
       "type": [
-        "IT"
+        "IT, Financial"
       ],
       "blocks": [
         {
@@ -287,11 +285,11 @@
     },
     {
       "id": "12",
-      "title": "Javascrip Trends",
+      "title": "Python Trends",
       "subtitle": "Top JS trends you should follow in 2023",
-      "img": "https://c8.alamy.com/comp/T7XT3E/black-and-white-alphabet-letter-js-j-s-logo-icon-design-for-a-company-or-business-T7XT3E.jpg",
-      "views": 1033,
-      "createdAt": "04.09.2023",
+      "img": "https://static-assets.codecademy.com/assets/course-landing-page/meta/4x3/learn-python-3.jpg",
+      "views": 119,
+      "createdAt": "08.09.2023",
       "userId": "1",
       "type": [
         "IT"
@@ -311,10 +309,10 @@
     },
     {
       "id": "13",
-      "title": "Javascrip Trends",
+      "title": "TypeScript Trends",
       "subtitle": "Top JS trends you should follow in 2023",
-      "img": "https://makeanapplike.com/wp-content/uploads/2022/02/Node-JS-trends-2022.jpg",
-      "views": 1033,
+      "img": "https://angularexperts.imgix.net/blog/advanced-typescript/title-16x9.webp?auto=format&w=1920",
+      "views": 1833,
       "createdAt": "04.09.2023",
       "userId": "1",
       "type": [
@@ -335,11 +333,11 @@
     },
     {
       "id": "14",
-      "title": "Javascrip Trends",
+      "title": "Java Trends",
       "subtitle": "Top JS trends you should follow in 2023",
-      "img": "https://i.ytimg.com/vi/umVoV4ak0HA/maxresdefault.jpg",
-      "views": 1033,
-      "createdAt": "04.09.2023",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyuXdQQyPe5wmsNxd5yzRILC6efwriDoQNQw&usqp=CAU",
+      "views": 2039,
+      "createdAt": "04.08.2023",
       "userId": "1",
       "type": [
         "IT"
@@ -359,14 +357,14 @@
     },
     {
       "id": "15",
-      "title": "Javascrip Trends",
+      "title": "Bitcoin Trends",
       "subtitle": "Top JS trends you should follow in 2023",
-      "img": "https://c8.alamy.com/comp/T7XT3E/black-and-white-alphabet-letter-js-j-s-logo-icon-design-for-a-company-or-business-T7XT3E.jpg",
-      "views": 1033,
-      "createdAt": "04.09.2023",
-      "userId": "1",
+      "img": "https://images.barrons.com/im-405914?width=300&size=1.5",
+      "views": 16053,
+      "createdAt": "07.09.2023",
+      "userId": "2",
       "type": [
-        "IT"
+        "Financial"
       ],
       "blocks": [
         {
@@ -383,14 +381,14 @@
     },
     {
       "id": "20",
-      "title": "Javascrip Trends",
+      "title": "Dogecoin Trends",
       "subtitle": "Top JS trends you should follow in 2023",
-      "img": "https://makeanapplike.com/wp-content/uploads/2022/02/Node-JS-trends-2022.jpg",
-      "views": 1033,
-      "createdAt": "04.09.2023",
-      "userId": "1",
+      "img": "https://ixbt.online/live/images/original/00/06/21/2023/07/06/67ccb6bcbe.jpg",
+      "views": 1131,
+      "createdAt": "06.09.2023",
+      "userId": "2",
       "type": [
-        "IT"
+        "Financial"
       ],
       "blocks": [
         {
@@ -407,14 +405,14 @@
     },
     {
       "id": "22",
-      "title": "Javascrip Trends",
+      "title": "Ethereum  Trends",
       "subtitle": "Top JS trends you should follow in 2023",
-      "img": "https://i.ytimg.com/vi/umVoV4ak0HA/maxresdefault.jpg",
-      "views": 1033,
-      "createdAt": "04.09.2023",
+      "img": "https://imageio.forbes.com/specials-images/imageserve/63e5179bc38273483b361abf/Ethereum-coin-token-with-candlestick-chart-background--Digital-currency-/0x0.jpg?format=jpg&width=1440",
+      "views": 1337,
+      "createdAt": "04.07.2023",
       "userId": "1",
       "type": [
-        "IT"
+        "Financial"
       ],
       "blocks": [
         {
@@ -431,14 +429,14 @@
     },
     {
       "id": "25",
-      "title": "Javascrip Trends",
+      "title": "Ethereum fails",
       "subtitle": "Top JS trends you should follow in 2023",
-      "img": "https://c8.alamy.com/comp/T7XT3E/black-and-white-alphabet-letter-js-j-s-logo-icon-design-for-a-company-or-business-T7XT3E.jpg",
-      "views": 1033,
-      "createdAt": "04.09.2023",
+      "img": "https://cdn-deiic.nitrocdn.com/SaOzCCvKLohOtMIkpGZHLiOVXuALxPHu/assets/images/optimized/rev-d8a5d8c/au/wp-content/uploads/2023/05/ethereum-price-1000x570.jpg",
+      "views": 4433,
+      "createdAt": "10.09.2023",
       "userId": "1",
       "type": [
-        "IT"
+        "Financial"
       ],
       "blocks": [
         {
@@ -455,10 +453,10 @@
     },
     {
       "id": "27",
-      "title": "Javascrip Trends",
+      "title": "Rust news",
       "subtitle": "Top JS trends you should follow in 2023",
-      "img": "https://makeanapplike.com/wp-content/uploads/2022/02/Node-JS-trends-2022.jpg",
-      "views": 1033,
+      "img": "https://www.developer-tech.com/wp-content/uploads/sites/3/2023/08/state-of-rust-2022-global-adoption-positive-outlook-report-study-survey-research-programming-language-350x197.jpeg",
+      "views": 1010,
       "createdAt": "04.09.2023",
       "userId": "1",
       "type": [
@@ -479,14 +477,14 @@
     },
     {
       "id": "30",
-      "title": "Javascrip Trends",
+      "title": "Bitcoin is the best",
       "subtitle": "Top JS trends you should follow in 2023",
-      "img": "https://i.ytimg.com/vi/umVoV4ak0HA/maxresdefault.jpg",
-      "views": 1033,
+      "img": "https://www.analyticsinsight.net/wp-content/uploads/2023/06/Fundamental-Analysis-Bitcoin.jpg",
+      "views": 1463,
       "createdAt": "04.09.2023",
       "userId": "1",
       "type": [
-        "IT"
+        "Financial"
       ],
       "blocks": [
         {
@@ -503,10 +501,10 @@
     },
     {
       "id": "33",
-      "title": "Javascrip Trends",
+      "title": "Javascrip future",
       "subtitle": "Top JS trends you should follow in 2023",
-      "img": "https://c8.alamy.com/comp/T7XT3E/black-and-white-alphabet-letter-js-j-s-logo-icon-design-for-a-company-or-business-T7XT3E.jpg",
-      "views": 1033,
+      "img": "https://cdn.thenewstack.io/media/2023/07/ae853b9b-browsers_beyond.jpg",
+      "views": 2353,
       "createdAt": "04.09.2023",
       "userId": "1",
       "type": [
@@ -562,6 +560,12 @@
       "userId": "2",
       "text": "fadf",
       "id": "qdRltcM"
+    },
+    {
+      "articleId": "27",
+      "userId": "2",
+      "text": "zgsg",
+      "id": "C2dhCQl"
     }
   ],
   "users": [

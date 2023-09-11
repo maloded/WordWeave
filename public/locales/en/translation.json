@@ -8,6 +8,7 @@
   "Not found": "Not found",
   "Somthing went wrong": "Somthing went wrong",
   "Refresh page": "Refresh page",
+  "Articles were not found": "Articles were not found",
   "Log in": "Log in",
   "Your username": "Your username",
   "Your password": "Your password",
@@ -16,5 +17,18 @@
   "Log out": "Log out",
   "Comments are missing": "Comments are missing",
   "Leave your comment here": "Leave your comment here",
-  "Send": "Send"
+  "Send": "Send",
+  "Sort by": "Sort by",
+  "By": "by",
+  "Search": "Search",
+  "created at": "created at",
+  "title": "title",
+  "views": "views",
+  "ascending": "ascending",
+  "descending": "descending",
+  "All": "All",
+  "IT": "IT",
+  "Financial": "Financial",
+  "Science": "Science",
+  "Economic": "Economic"
 }
