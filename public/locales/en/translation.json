@@ -1,4 +1,5 @@
 {
+  "Word Weave": "Word Weave",
   "Lang": "Ua lang",
   "Short Lang": "UA",
   "About": "About site",
@@ -30,5 +31,6 @@
   "IT": "IT",
   "Financial": "Financial",
   "Science": "Science",
-  "Economic": "Economic"
+  "Economic": "Economic",
+  "Create article": "Create article"
 }
