@@ -67,19 +67,21 @@ export const Light: Story = {
           username: 'admin',
         },
       },
-      articleDetailsComments: {
-        entities: {
-          1: {
-            id: '1',
-            user: {
+      articleDetailsPage: {
+        comments: {
+          entities: {
+            1: {
               id: '1',
-              username: 'admin',
+              user: {
+                id: '1',
+                username: 'admin',
+              },
+              text: 'Great',
             },
-            text: 'Great',
           },
+          ids: ['1'],
+          isLoading: true,
         },
-        ids: ['1'],
-        isLoading: true,
       },
     }),
   ],

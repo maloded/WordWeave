@@ -1,9 +1,9 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
-import { ArticleDetails } from 'entity/Article';
+import { ArticleDetails, ArticleList } from 'entity/Article';
 import { useNavigate, useParams } from 'react-router-dom';
-import { Text } from 'shared/ui/Text/Text';
+import { Text, TextSize } from 'shared/ui/Text/Text';
 import { CommentList } from 'entity/Comment';
 import {
   DynamicModuleLoader,
@@ -24,17 +24,26 @@ import {
   getArticleCommentsIsLoading,
 } from '../../model/selectors/comments';
 import {
-  articleDetailsCommentsReducer,
   getArticleComments,
 } from '../../model/slices/articleDetailsCommentsSlice';
 import cls from './ArticleDetailsPage.module.scss';
+import {
+  getArticleRecommendation,
+} from '../../model/slices/articleDetailsPageRecommendationsSlice';
+import {
+  getArticlePageRecommendationsIsLoading,
+} from '../../model/selectors/recommendations';
+import {
+  fetchArticleRecommendations,
+} from '../../model/services/fetchArticleRecommendations/fetchArticleRecommendations';
+import { articleDetailsPageReducer } from '../../model/slices';
 
 interface ArticleDetailsPageProps {
   className?: string;
 }
 
 const reducers: ReducersList = {
-  articleDetailsComments: articleDetailsCommentsReducer,
+  articleDetailsPage: articleDetailsPageReducer,
 };
 
 const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
@@ -45,7 +54,9 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
   const { id } = useParams<{ id: string }>();
 
   const comments = useSelector(getArticleComments.selectAll);
-  const isLoading = useSelector(getArticleCommentsIsLoading);
+  const recommendations = useSelector(getArticleRecommendation.selectAll);
+  const isLoadingComments = useSelector(getArticleCommentsIsLoading);
+  const isLoadingRecommendations = useSelector(getArticlePageRecommendationsIsLoading);
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
@@ -58,6 +69,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
   }, [dispatch]);
 
   useInitialEffect(() => {
+    dispatch(fetchArticleRecommendations());
     dispatch(fetchCommentsByArticleId(id));
   });
 
@@ -77,11 +89,22 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
         </Button>
         <ArticleDetails id={id} />
         <Text
+          size={TextSize.L}
+          title={t('Recommendations')}
+        />
+        <ArticleList
+          articles={recommendations}
+          isLoading={isLoadingRecommendations}
+          className={cls.recommendations}
+          target="_blank"
+        />
+        <Text
+          size={TextSize.L}
           className={cls.commentTitle}
           title={t('Comments')}
         />
         <AddCommentForm onSendComment={onSendComment} />
-        <CommentList isLoading={isLoading} comments={comments} />
+        <CommentList isLoading={isLoadingComments} comments={comments} />
       </Page>
     </DynamicModuleLoader>
   );
