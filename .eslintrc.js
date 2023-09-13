@@ -52,6 +52,7 @@ module.exports = {
           "justify",
           "gap",
           "direction",
+          "role",
         ],
       },
     ],
