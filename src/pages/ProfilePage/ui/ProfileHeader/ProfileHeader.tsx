@@ -5,11 +5,10 @@ import { useTranslation } from 'react-i18next';
 import { useCallback } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import {
-  getCanEditProfile, getProfileData, profileActions, updateProfileData,
+  getCanEditProfile, profileActions, updateProfileData,
 } from 'entity/Profile';
 import { useSelector } from 'react-redux';
-import { getUserAuthData } from 'entity/User';
-import cls from './ProfileHeader.module.scss';
+import { HStack } from 'shared/ui/Stack';
 
 interface ProfileHeaderProps {
   className?: string;
@@ -40,14 +39,17 @@ export const ProfileHeader = (props: ProfileHeaderProps) => {
   }, [dispatch]);
 
   return (
-    <div className={classNames(cls.ProfileHeader, {}, [className])}>
+    <HStack
+      justify="between"
+      max
+      className={classNames('', {}, [className])}
+    >
       <Text title={t('Profile')} />
       {canEdit && (
-        <div className={cls.btnsWrapper}>
+        <div>
           {readonly
             ? (
               <Button
-                className={cls.editBtn}
                 theme={ButtonTheme.OUTLINE}
                 onClick={onEdit}
               >
@@ -55,25 +57,23 @@ export const ProfileHeader = (props: ProfileHeaderProps) => {
               </Button>
             )
             : (
-              <>
+              <HStack gap="8">
                 <Button
-                  className={cls.editBtn}
                   theme={ButtonTheme.OUTLINE_RED}
                   onClick={onCancelEdit}
                 >
                   {t('Cancel')}
                 </Button>
                 <Button
-                  className={cls.saveBtn}
                   theme={ButtonTheme.OUTLINE}
                   onClick={onSaveEdit}
                 >
                   {t('Save')}
                 </Button>
-              </>
+              </HStack>
             )}
         </div>
       )}
-    </div>
+    </HStack>
   );
 };

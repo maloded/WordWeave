@@ -20,6 +20,7 @@ import { addCommentForArticle } from 'pages/ArticleDetailsPage/model/services/ad
 import { Page } from 'widgets/Page';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import { VStack } from 'shared/ui/Stack';
 import {
   getArticleCommentsIsLoading,
 } from '../../model/selectors/comments';
@@ -80,25 +81,27 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
   return (
     <DynamicModuleLoader reducers={reducers}>
       <Page className={classNames('', {}, [className])}>
-        <ArticleDetailsPageHeader />
-        <ArticleDetails id={id} />
-        <Text
-          size={TextSize.L}
-          title={t('Recommendations')}
-        />
-        <ArticleList
-          articles={recommendations}
-          isLoading={isLoadingRecommendations}
-          className={cls.recommendations}
-          target="_blank"
-        />
-        <Text
-          size={TextSize.L}
-          className={cls.commentTitle}
-          title={t('Comments')}
-        />
-        <AddCommentForm onSendComment={onSendComment} />
-        <CommentList isLoading={isLoadingComments} comments={comments} />
+        <VStack gap="16" max>
+          <ArticleDetailsPageHeader />
+          <ArticleDetails id={id} />
+          <Text
+            size={TextSize.L}
+            title={t('Recommendations')}
+          />
+          <ArticleList
+            articles={recommendations}
+            isLoading={isLoadingRecommendations}
+            className={cls.recommendations}
+            target="_blank"
+          />
+          <Text
+            size={TextSize.L}
+            className={cls.commentTitle}
+            title={t('Comments')}
+          />
+          <AddCommentForm onSendComment={onSendComment} />
+          <CommentList isLoading={isLoadingComments} comments={comments} />
+        </VStack>
       </Page>
     </DynamicModuleLoader>
   );
