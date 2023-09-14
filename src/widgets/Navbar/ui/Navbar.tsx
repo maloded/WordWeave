@@ -5,9 +5,11 @@ import { memo, useCallback, useState } from 'react';
 import { LoginModal } from 'features/AuthByUsername';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserAuthData, userActions } from 'entity/User';
-import { Text, TextTheme } from 'shared/ui/Text/Text';
+import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { Dropdown } from 'shared/ui/Dropdown/Dropdown';
+import { Avatar } from 'shared/ui/Avatar/Avatar';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -46,13 +48,21 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         >
           {t('Create article')}
         </AppLink>
-        <Button
-          theme={ButtonTheme.CLEAR_INVERTED}
-          className={cls.links}
-          onClick={onLogout}
-        >
-          {t('Log out')}
-        </Button>
+        <Dropdown
+          direction="bottom left"
+          className={cls.dropdown}
+          items={[
+            {
+              content: <Text text={t('Me profile')} />,
+              href: `${RoutePath.profile}${authData.id}`,
+            },
+            {
+              content: <Text text={t('Log out')} />,
+              onClick: onLogout,
+            },
+          ]}
+          trigger={<Avatar size={30} src={authData.avatar} />}
+        />
       </header>
     );
   }
