@@ -4,25 +4,25 @@ import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useTranslation } from 'react-i18next';
 import { useCallback } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
-import {
-  getCanEditProfile, profileActions, updateProfileData,
-} from 'entity/Profile';
 import { useSelector } from 'react-redux';
 import { HStack } from 'shared/ui/Stack';
+import { getCanEditProfile } from '../../model/selectors/getCanEditProfile/getCanEditProfile';
+import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly';
+import { profileActions } from '../../model/slice/profileSlice';
+import { updateProfileData } from '../../model/services/updateProfileData/updateProfileData';
 
-interface ProfileHeaderProps {
+interface EditableProfileCardHeaderProps {
   className?: string;
-  readonly?: boolean;
 }
 
-export const ProfileHeader = (props: ProfileHeaderProps) => {
+export const EditableProfileCardHeader = (props: EditableProfileCardHeaderProps) => {
   const {
     className,
-    readonly = true,
   } = props;
 
   const { t } = useTranslation('profile');
   const canEdit = useSelector(getCanEditProfile);
+  const readonly = useSelector(getProfileReadonly);
 
   const dispatch = useAppDispatch();
 
@@ -52,6 +52,7 @@ export const ProfileHeader = (props: ProfileHeaderProps) => {
               <Button
                 theme={ButtonTheme.OUTLINE}
                 onClick={onEdit}
+                data-testid="EditableProfileCardHeader.EditButton"
               >
                 {t('Edit profile')}
               </Button>
@@ -61,12 +62,14 @@ export const ProfileHeader = (props: ProfileHeaderProps) => {
                 <Button
                   theme={ButtonTheme.OUTLINE_RED}
                   onClick={onCancelEdit}
+                  data-testid="EditableProfileCardHeader.CancelButton"
                 >
                   {t('Cancel')}
                 </Button>
                 <Button
                   theme={ButtonTheme.OUTLINE}
                   onClick={onSaveEdit}
+                  data-testid="EditableProfileCardHeader.SaveButton"
                 >
                   {t('Save')}
                 </Button>

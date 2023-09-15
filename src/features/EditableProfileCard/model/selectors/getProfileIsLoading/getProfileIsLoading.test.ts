@@ -1,6 +1,4 @@
 import { StateSchema } from 'app/providers/StoreProvider';
-import { Country } from 'entity/Country';
-import { Currency } from 'entity/Currency';
 import { getProfileIsLoading } from './getProfileIsLoading';
 
 describe('getProfileIsLoading', () => {
