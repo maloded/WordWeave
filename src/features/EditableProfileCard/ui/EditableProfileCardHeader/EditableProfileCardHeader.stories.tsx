@@ -2,17 +2,17 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import MainPage from './MainPage';
+import { EditableProfileCardHeader } from './EditableProfileCardHeader';
 
-const meta: Meta<typeof MainPage> = {
-  title: 'pages/MainPage',
-  component: MainPage,
+const meta: Meta<typeof EditableProfileCardHeader> = {
+  title: 'features/EditableProfileCardHeader ',
+  component: EditableProfileCardHeader,
   tags: ['autodocs'],
   decorators: [StoreDecorator({})],
 };
 
 export default meta;
-type Story = StoryObj<typeof MainPage>;
+type Story = StoryObj<typeof EditableProfileCardHeader>;
 
 export const Light: Story = {
   args: {},
