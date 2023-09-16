@@ -578,16 +578,38 @@
     {
       "id": "1",
       "username": "admin",
-      "password": "123",
-      "role": "ADMIN",
+      "password": "111",
+      "roles": [
+        "ADMIN"
+      ],
       "avatar": "https://images.unsplash.com/photo-1494959764136-6be9eb3c261e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
     },
     {
       "id": "2",
       "username": "user",
-      "password": "321",
-      "role": "USER",
+      "password": "222",
+      "roles": [
+        "USER"
+      ],
       "avatar": "http://zornet.ru/_fr/90/1942736.jpg"
+    },
+    {
+      "id": "3",
+      "username": "Ivan",
+      "password": "333",
+      "roles": [
+        "MANAGER"
+      ],
+      "avatar": "https://static.wixstatic.com/media/dd6e92_4e7d5ecd036c40579f800ac3c59fa7e1~mv2.jpg/v1/crop/x_0,y_60,w_1080,h_1560/fill/w_438,h_636,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Randy%20Hemann.jpg"
+    },
+    {
+      "id": "4",
+      "username": "Ded",
+      "password": "444",
+      "roles": [
+        "USER"
+      ],
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Katherine_Heigl_at_27_Dresses_Premiere_17_%28cropped%29.jpg/220px-Katherine_Heigl_at_27_Dresses_Premiere_17_%28cropped%29.jpg"
     }
   ],
   "profile": [
@@ -612,6 +634,28 @@
       "city": "Dnipro",
       "username": "user",
       "avatar": "http://zornet.ru/_fr/90/1942736.jpg"
+    },
+    {
+      "id": "3",
+      "first": "Ivan",
+      "lastname": "Dom",
+      "age": 33,
+      "currency": "GRN",
+      "country": "Ukraine",
+      "city": "Dnipro",
+      "username": "Ivan",
+      "avatar": "https://static.wixstatic.com/media/dd6e92_4e7d5ecd036c40579f800ac3c59fa7e1~mv2.jpg/v1/crop/x_0,y_60,w_1080,h_1560/fill/w_438,h_636,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Randy%20Hemann.jpg"
+    },
+    {
+      "id": "4",
+      "first": "Katherine",
+      "lastname": "Heigl",
+      "age": 22,
+      "currency": "GRN",
+      "country": "Ukraine",
+      "city": "Dnipro",
+      "username": "Ded",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Katherine_Heigl_at_27_Dresses_Premiere_17_%28cropped%29.jpg/220px-Katherine_Heigl_at_27_Dresses_Premiere_17_%28cropped%29.jpg"
     }
   ]
 }
