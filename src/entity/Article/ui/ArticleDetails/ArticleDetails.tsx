@@ -22,7 +22,8 @@ import {
   getArticleDetailsIsLoading,
 } from '../../model/selectors/getArticleDetails';
 import { articleDetailsReducer } from '../../model/slice/articleDetailSlice';
-import { ArticleBlock, ArticleBlockType } from '../../model/types/article';
+import { ArticleBlock } from '../../model/types/article';
+import { ArticleBlockType } from '../../model/consts/article';
 import {
   ArticleCodeBlockComponent,
 } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';

@@ -1,10 +1,5 @@
 import { User } from '../../../User/model/types/userSchema';
-
-export enum ArticleBlockType {
-  IMAGE = 'IMAGE',
-  CODE = 'CODE',
-  TEXT = 'TEXT',
-}
+import { ArticleBlockType, ArticleType } from '../consts/article';
 
 export interface ArticleBlockBase {
   id: string;
@@ -29,19 +24,6 @@ export interface ArticleTextBlock extends ArticleBlockBase {
 }
 
 export type ArticleBlock = ArticleCodeBlock | ArticleImageBlock | ArticleTextBlock;
-
-export enum ArticleType {
-  ALL = 'All',
-  IT = 'IT',
-  FINANCIAL = 'Financial',
-  SCIENCE = 'Science',
-  ECONOMIC = 'Economic',
-}
-
-export enum ArticleView {
-  BIG = 'BIG',
-  SMALL = 'SMALL',
-}
 
 export interface Article {
   id: string;
