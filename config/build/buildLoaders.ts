@@ -1,7 +1,66 @@
 import { RuleSetRule } from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import { PluginItem } from '@babel/core';
 import { BuildOptions } from './types/config';
-import { buildBabelLoader } from './loaders/buildBabelLoader';
+
+const babelRemovePropsPlugin = function (): PluginItem {
+  return {
+    visitor: {
+      Program(path, state) {
+        const forbidden = state.opts.props || [];
+
+        path.traverse({
+          JSXIdentifier(current) {
+            const nodeName = current.node.name;
+
+            if (forbidden.includes(nodeName)) {
+              current.parentPath.remove();
+            }
+          },
+        });
+      },
+    },
+  };
+};
+
+interface BuildBabelLoaderProps extends BuildOptions {
+  isTsx?: boolean;
+}
+
+function buildBabelLoader({ isDev, isTsx }: BuildBabelLoaderProps) {
+  return {
+    test: isTsx ? /\.(jsx|tsx)$/ : /\.(js|ts)$/,
+    exclude: /node_modules/,
+    use: {
+      loader: 'babel-loader',
+      options: {
+        presets: ['@babel/preset-env'],
+        plugins: [
+          [
+            'i18next-extract',
+            {
+              locales: ['ua', 'en'],
+              keyAsDefaultValue: true,
+            },
+          ],
+          [
+            '@babel/plugin-transform-typescript',
+            {
+              isTsx,
+            },
+          ],
+          '@babel/plugin-transform-runtime',
+          isTsx && [
+            babelRemovePropsPlugin,
+            {
+              props: ['data-testid'],
+            },
+          ],
+        ].filter(Boolean),
+      },
+    },
+  };
+}
 
 export function buildLoaders(options: BuildOptions): RuleSetRule[] {
   const { isDev } = options;

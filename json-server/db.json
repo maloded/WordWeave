@@ -1,4 +1,38 @@
 {
+  "notifications": [
+    {
+      "id": "1",
+      "title": "New Article: Cybersecurity Best Practices",
+      "description": "Stay updated on the latest cybersecurity best practices and protect your systems.",
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "title": "Featured Article: Cloud Migration Strategies",
+      "description": "Learn about effective strategies for migrating to the cloud and optimizing your infrastructure.",
+      "userId": "1",
+      "href": "http://localhost:3000/admin"
+    },
+    {
+      "id": "3",
+      "title": "Reminder: Webinar on AI in Business",
+      "description": "Don't forget to join our upcoming webinar on the role of AI in modern business operations.",
+      "userId": "1",
+      "href": "http://localhost:3000/admin"
+    },
+    {
+      "id": "4",
+      "title": "New Whitepaper: DevOps Best Practices",
+      "description": "Explore the latest whitepaper discussing best practices in DevOps for efficient software delivery.",
+      "userId": "1"
+    },
+    {
+      "id": "5",
+      "title": "New Article: Data Analytics Trends",
+      "description": "Discover the latest trends in data analytics and how they can drive business growth.",
+      "userId": "2"
+    }
+  ],
   "posts": [
     {
       "id": "1",
