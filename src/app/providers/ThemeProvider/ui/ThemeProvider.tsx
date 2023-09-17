@@ -9,7 +9,7 @@ import {
 
 console.log('key', localStorage.getItem(LOCAL_STORAGE_THEME_KEY));
 const defaultTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme
-  || Theme.LIGHT;
+  || (localStorage.setItem(LOCAL_STORAGE_THEME_KEY, Theme.LIGHT), Theme.LIGHT);
 
 interface ThemeProviderProps {
   children?: ReactNode,
