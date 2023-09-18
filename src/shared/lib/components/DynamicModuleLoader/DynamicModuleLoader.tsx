@@ -1,8 +1,8 @@
-import { ManagedReduxStore } from 'app/providers/StoreProvider';
-import { StateSchemaKey } from 'app/providers/StoreProvider/config/StateSchema';
 import { FC, ReactNode, useEffect } from 'react';
 import { useDispatch, useStore } from 'react-redux';
 import { Reducer } from '@reduxjs/toolkit';
+import { StateSchemaKey } from '@/app/providers/StoreProvider/config/StateSchema';
+import { ManagedReduxStore } from '@/app/providers/StoreProvider';
 
 export type ReducersList = {
   [name in StateSchemaKey]?: Reducer;

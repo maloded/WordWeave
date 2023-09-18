@@ -1,6 +1,6 @@
-import { StateSchema } from 'app/providers/StoreProvider';
-import { ArticleType, ArticleView } from 'entity/Article';
-import { ArticlesSortField } from 'features/ArticlesSortSelector';
+import { StateSchema } from '@/app/providers/StoreProvider';
+import { ArticleType, ArticleView } from '@/entity/Article';
+import { ArticlesSortField } from '@/features/ArticlesSortSelector';
 
 export const getArticlesPageIsLoading = (
   state: StateSchema,
