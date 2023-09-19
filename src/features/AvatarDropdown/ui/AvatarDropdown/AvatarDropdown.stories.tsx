@@ -2,11 +2,22 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from '@/app/providers/ThemeProvider';
 import { AvatarDropdown } from './AvatarDropdown';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
+import { UserRole } from '@/entity/User';
 
 const meta: Meta<typeof AvatarDropdown> = {
   title: 'features/AvatarDropdown',
   component: AvatarDropdown,
   tags: ['autodocs'],
+  decorators: [StoreDecorator({
+    user: {
+      authData: {
+        id: '1',
+        roles: ['ADMIN' as UserRole.ADMIN],
+        username: 'ded',
+      },
+    },
+  })],
 };
 
 export default meta;

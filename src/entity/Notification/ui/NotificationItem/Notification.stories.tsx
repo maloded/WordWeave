@@ -4,7 +4,7 @@ import { Theme } from '@/app/providers/ThemeProvider';
 import { NotificationItem } from './NotificationItem';
 
 const meta: Meta<typeof NotificationItem> = {
-  title: 'entity/NotificationItem',
+  title: 'entity/Notification/NotificationItem',
   component: NotificationItem,
   tags: ['autodocs'],
 };
