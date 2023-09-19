@@ -21,6 +21,7 @@
   "Me profile": "Мій профіль ",
   "Comments are missing": "Коментарії є відсутні",
   "Leave your comment here": "Залиште Ваш коментарій тут",
+  "Close": "Закрити",
   "Send": "Відправити",
   "Sort by": "Сортувати по",
   "By": "у",
@@ -37,5 +38,7 @@
   "Economic": "Економіка",
   "Create article": "Створити статтю",
   "Adminca": "Адмінка",
-  "The page is forbidden for you!": "Сторінка є закритою для Вас!"
+  "The page is forbidden for you!": "Сторінка є закритою для Вас!",
+  "Your feedback": "Ваш відгук",
+  "Thank you for feedback": "Дякую за Ваш відгук!"
 }

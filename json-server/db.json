@@ -691,5 +691,67 @@
       "username": "Ded",
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Katherine_Heigl_at_27_Dresses_Premiere_17_%28cropped%29.jpg/220px-Katherine_Heigl_at_27_Dresses_Premiere_17_%28cropped%29.jpg"
     }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Great article",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 5,
+      "feedback": "The best article",
+      "userId": "4",
+      "articleId": "11"
+    },
+    {
+      "userId": "3",
+      "articleId": "10",
+      "rate": 4,
+      "feedback": "",
+      "id": "HPN3M_d"
+    },
+    {
+      "userId": "3",
+      "articleId": "11",
+      "rate": 5,
+      "feedback": "Supper",
+      "id": "xDmuACz"
+    },
+    {
+      "userId": "3",
+      "articleId": "27",
+      "rate": 1,
+      "id": "mGai8BL"
+    },
+    {
+      "userId": "3",
+      "articleId": "27",
+      "rate": 5,
+      "id": "bhE3d7C"
+    },
+    {
+      "userId": "3",
+      "articleId": "15",
+      "rate": 4,
+      "feedback": "",
+      "id": "C0p5wdS"
+    },
+    {
+      "userId": "3",
+      "articleId": "22",
+      "rate": 3,
+      "id": "a9v49U5"
+    },
+    {
+      "userId": "3",
+      "articleId": "3",
+      "rate": 5,
+      "feedback": "great",
+      "id": "ocUzyj7"
+    }
   ]
 }
