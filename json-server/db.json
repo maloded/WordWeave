@@ -606,6 +606,18 @@
       "userId": "1",
       "text": "Rust is the best!",
       "id": "HHeFIGk"
+    },
+    {
+      "articleId": "14",
+      "userId": "4",
+      "text": "Great article",
+      "id": "8ri_mgF"
+    },
+    {
+      "articleId": "14",
+      "userId": "2",
+      "text": "Agreed ",
+      "id": "w9t05vV"
     }
   ],
   "users": [
@@ -673,9 +685,9 @@
       "id": "3",
       "first": "Ivan",
       "lastname": "Dom",
-      "age": 33,
+      "age": 34,
       "currency": "GRN",
-      "country": "Ukraine",
+      "country": "Germany",
       "city": "Dnipro",
       "username": "Ivan",
       "avatar": "https://static.wixstatic.com/media/dd6e92_4e7d5ecd036c40579f800ac3c59fa7e1~mv2.jpg/v1/crop/x_0,y_60,w_1080,h_1560/fill/w_438,h_636,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Randy%20Hemann.jpg"
@@ -752,6 +764,26 @@
       "rate": 5,
       "feedback": "great",
       "id": "ocUzyj7"
+    },
+    {
+      "userId": "4",
+      "articleId": "14",
+      "rate": 5,
+      "feedback": "great",
+      "id": "6oMFPgM"
+    },
+    {
+      "userId": "2",
+      "articleId": "14",
+      "rate": 2,
+      "id": "mlTeFbO"
+    },
+    {
+      "userId": "2",
+      "articleId": "27",
+      "rate": 3,
+      "feedback": "",
+      "id": "N3qR5fa"
     }
   ]
 }
