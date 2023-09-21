@@ -4,12 +4,12 @@ import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Dropdown } from '@/shared/ui/Popups';
 import { Text } from '@/shared/ui/Text/Text';
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import { Avatar } from '@/shared/ui/Avatar/Avatar';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
 import {
   getUserAuthData, isUserAdmin, isUserManager, userActions,
 } from '@/entity/User';
+import { RoutePath } from '@/shared/const/router';
 
 interface AvatarDropdownProps {
   className?: string;
