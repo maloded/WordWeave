@@ -5,14 +5,14 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
 import { ArticleType, ArticleView } from '@/entity/Article';
 import { ArticleViewSelector } from '@/features/ArticleViewSelector';
-import { Card } from '@/shared/ui/Card/Card';
-import { Input } from '@/shared/ui/Input/Input';
+import { Card } from '@/shared/ui/Card';
+import { Input } from '@/shared/ui/Input';
 import {
   ArticlesSortField,
   ArticlesSortSelector,
 } from '@/features/ArticlesSortSelector';
 import { useDebounce } from '@/shared/lib/hooks/useDebounce';
-import { TabItem } from '@/shared/ui/Tab/Tab';
+import { TabItem } from '@/shared/ui/Tab';
 import { ArticleTypeTabs } from '@/features/ArticleTypeTabs';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import { articlesPageActions } from '../../model/slices/articlesPageSlice';

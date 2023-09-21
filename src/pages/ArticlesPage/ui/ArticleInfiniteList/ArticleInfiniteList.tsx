@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { ArticleList } from '@/entity/Article';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
-import { Text } from '@/shared/ui/Text/Text';
+import { Text } from '@/shared/ui/Text';
 import { getArticles } from '../../model/slices/articlesPageSlice';
 import {
   getArticlesPageError,
