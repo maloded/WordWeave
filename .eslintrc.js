@@ -77,7 +77,18 @@ module.exports = {
       "error",
       {
         alias: "@",
-        testFilesPatterns: ["**/*.test.*", "**/*.story.*", "**/StoreDecorator.tsx"],
+        testFilesPatterns: [
+          "**/*.test.*",
+          "**/*.story.*",
+          "**/StoreDecorator.tsx",
+        ],
+      },
+    ],
+    "ded-plugin/layer-imports": [
+      "error",
+      {
+        alias: "@",
+        ignoreImportPatterns: ["**/StoreProvider", "**/testing"],
       },
     ],
   },

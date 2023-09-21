@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from '@/app/providers/ThemeProvider';
 import { Popover } from './Popover';
 import { Button } from '../../../Button/Button';
+import { Theme } from '@/shared/const/theme';
 
 const meta: Meta<typeof Popover> = {
   title: 'shared/Popover',
