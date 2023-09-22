@@ -131,7 +131,7 @@ export const BigGreen: Story = {
   },
 };
 
-export const isLoadingBig: Story = {
+export const IsLoadingBig: Story = {
   args: {
     isLoading: true,
     articles: [],
@@ -139,7 +139,7 @@ export const isLoadingBig: Story = {
   },
 };
 
-export const isLoadingBigDark: Story = {
+export const IsLoadingBigDark: Story = {
   decorators: [ThemeDecorator(Theme.DARK)],
   args: {
     isLoading: true,
@@ -148,7 +148,7 @@ export const isLoadingBigDark: Story = {
   },
 };
 
-export const isLoadingBigGreen: Story = {
+export const IsLoadingBigGreen: Story = {
   decorators: [ThemeDecorator(Theme.GREEN)],
   args: {
     isLoading: true,
@@ -193,7 +193,7 @@ export const SmallGreen: Story = {
     view: ArticleView.SMALL,
   },
 };
-export const isLoadingSmall: Story = {
+export const IsLoadingSmall: Story = {
   args: {
     isLoading: true,
     articles: [],
@@ -201,7 +201,7 @@ export const isLoadingSmall: Story = {
   },
 };
 
-export const isLoadingSmallDark: Story = {
+export const IsLoadingSmallDark: Story = {
   decorators: [ThemeDecorator(Theme.DARK)],
   args: {
     isLoading: true,
@@ -210,7 +210,7 @@ export const isLoadingSmallDark: Story = {
   },
 };
 
-export const isLoadingSmallGreen: Story = {
+export const IsLoadingSmallGreen: Story = {
   decorators: [ThemeDecorator(Theme.GREEN)],
   args: {
     isLoading: true,

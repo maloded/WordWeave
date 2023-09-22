@@ -14,7 +14,7 @@ export const BugButton = () => {
     <Button
       onClick={onThrow}
     >
-      throw error;
+      🐛
     </Button>
   );
 };

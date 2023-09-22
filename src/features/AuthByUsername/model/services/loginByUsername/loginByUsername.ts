@@ -21,7 +21,6 @@ export const loginByUsername = createAsyncThunk<User, LoginByUNProps, ThunkConfi
 
       return response.data;
     } catch (error) {
-      console.log(error);
       return rejectWithValue('Somthing went wrong');
     }
   },

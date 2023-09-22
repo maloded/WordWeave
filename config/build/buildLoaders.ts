@@ -27,7 +27,7 @@ interface BuildBabelLoaderProps extends BuildOptions {
   isTsx?: boolean;
 }
 
-function buildBabelLoader({ isDev, isTsx }: BuildBabelLoaderProps) {
+function buildBabelLoader({ isTsx }: BuildBabelLoaderProps) {
   return {
     test: isTsx ? /\.(jsx|tsx)$/ : /\.(js|ts)$/,
     exclude: /node_modules/,

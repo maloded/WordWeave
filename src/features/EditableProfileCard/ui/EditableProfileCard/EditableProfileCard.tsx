@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { useCallback, memo } from 'react';
 import { useSelector } from 'react-redux';
-import { classNames } from '@/shared/lib/classNames/classNames';
 import { Text, TextTheme } from '@/shared/ui/Text';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
 import { Currency } from '@/entity/Currency';
@@ -105,7 +104,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <VStack gap="16" max>
+      <VStack gap="16" max className={className}>
         <EditableProfileCardHeader />
         {validateErrors?.length && validateErrors.map((err) => (
           <Text
