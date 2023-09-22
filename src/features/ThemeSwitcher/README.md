@@ -1,0 +1,1 @@
+## ThemeSwitcher feature - Switche type of theme

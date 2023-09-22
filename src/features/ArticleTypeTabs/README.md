@@ -1,0 +1,1 @@
+## ArticleTypeTabs feature - Switche type of tubs

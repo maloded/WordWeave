@@ -1,0 +1,1 @@
+## LangSwitcher feature - Switche type of language
