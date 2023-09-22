@@ -9,7 +9,7 @@ import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
 import {
   getUserAuthData, isUserAdmin, isUserManager, userActions,
 } from '@/entity/User';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteAdmin, getRouteProfile } from '@/shared/const/router';
 
 interface AvatarDropdownProps {
   className?: string;
@@ -43,13 +43,13 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
         ...(isAdminPanelAvailable
           ? [{
             content: <Text text={t('Adminca')} />,
-            href: RoutePath.admin_panel,
+            href: getRouteAdmin(),
           }]
           : []
         ),
         {
           content: <Text text={t('Me profile')} />,
-          href: `${RoutePath.profile}${authData.id}`,
+          href: getRouteProfile(authData.id),
         },
         {
           content: <Text text={t('Log out')} />,

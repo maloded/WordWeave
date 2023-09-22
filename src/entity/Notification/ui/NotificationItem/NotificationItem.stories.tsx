@@ -7,6 +7,13 @@ const meta: Meta<typeof NotificationItem> = {
   title: 'entity/Notification/NotificationItem',
   component: NotificationItem,
   tags: ['autodocs'],
+  args: {
+    item: {
+      id: '1',
+      title: 'New Article: Cybersecurity Best Practices',
+      description: 'Stay updated on the latest cybersecurity best practices and protect your systems.',
+    },
+  },
 };
 
 export default meta;

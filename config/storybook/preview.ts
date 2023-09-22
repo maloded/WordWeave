@@ -1,9 +1,9 @@
 import type { Preview } from '@storybook/react';
-import { Theme } from '@/app/providers/ThemeProvider';
 import { StyleDecorator } from '@/shared/config/storybook/StyleDecorator/StyleDecorator';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { RouterDecorator } from '@/shared/config/storybook/RouterDecorator/RouterDecorator';
 import { SuspenseDecorator } from '@/shared/config/storybook/SuspenseDecorator/SuspenseDecorator';
+import { Theme } from '@/shared/const/theme';
 
 const preview: Preview = {
   parameters: {
@@ -13,6 +13,15 @@ const preview: Preview = {
         color: /(background|color)$/i,
         date: /Date$/,
       },
+    },
+    layout: 'fullscreen',
+    themes: {
+      default: 'green',
+      list: [
+        { name: 'light', class: Theme.LIGHT, color: '#eeeeee' },
+        { name: 'dark', class: Theme.DARK, color: '#000000' },
+        { name: 'green', class: Theme.GREEN, color: '#36751a' },
+      ],
     },
   },
   decorators: [
