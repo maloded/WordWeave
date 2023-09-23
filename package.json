@@ -29,6 +29,9 @@
   },
   "author": "Malodied Oliksii",
   "license": "MIT",
+  "lint-staged": {
+    "**/*.{ts,tsx}": "eslint"
+  },
   "devDependencies": {
     "@babel/core": "^7.17.5",
     "@babel/plugin-transform-runtime": "^7.18.10",
@@ -83,6 +86,7 @@
     "jest": "^27.5.1",
     "jest-html-reporters": "^3.0.10",
     "json-server": "^0.17.0",
+    "lint-staged": "^14.0.1",
     "loki": "^0.32.0",
     "mini-css-extract-plugin": "^2.5.3",
     "reg-cli": "^0.17.7",
@@ -128,15 +132,11 @@
     },
     "configurations": {
       "chrome.laptop": {
-        "target": "chrome.app",
+        "target": "chrome.docker",
         "width": 1366,
         "height": 768,
         "deviceScaleFactor": 1,
         "mobile": false
-      },
-      "chrome.iphone7": {
-        "target": "chrome.app",
-        "preset": "iPhone 7"
       }
     }
   }
