@@ -12,7 +12,7 @@ const AdminPanelPage = memo((props: AdminPanelPageProps) => {
   } = props;
 
   return (
-    <Page className={classNames('', {}, [className])}>
+    <Page data-testid="AdminPanelPage" className={classNames('', {}, [className])}>
       Admin
     </Page>
   );

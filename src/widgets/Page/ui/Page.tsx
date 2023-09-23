@@ -12,8 +12,9 @@ import { useThrottle } from '@/shared/lib/hooks/useThrottle';
 import { getPageScrollByPath } from '../model/selectors/pageSelectors';
 import cls from './Page.module.scss';
 import { pageActions } from '../model/slices/PageSlice';
+import { TestProps } from '@/shared/types/tests';
 
-interface PageProps {
+interface PageProps extends TestProps {
   className?: string;
   children: ReactNode;
   onScrollEnd?: () => void;
@@ -54,6 +55,7 @@ export const Page = memo((props: PageProps) => {
       ref={wrapperRef}
       className={classNames(cls.Page, {}, [className])}
       onScroll={onScroll}
+      data-testid={props['data-testid'] ?? 'Page'}
     >
       {children}
       {onScrollEnd
