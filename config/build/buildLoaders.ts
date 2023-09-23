@@ -27,22 +27,17 @@ interface BuildBabelLoaderProps extends BuildOptions {
   isTsx?: boolean;
 }
 
-function buildBabelLoader({ isTsx }: BuildBabelLoaderProps) {
+function buildBabelLoader({ isDev, isTsx }: BuildBabelLoaderProps) {
+  const isProd = !isDev;
   return {
     test: isTsx ? /\.(jsx|tsx)$/ : /\.(js|ts)$/,
     exclude: /node_modules/,
     use: {
       loader: 'babel-loader',
       options: {
+        cacheDirectory: true,
         presets: ['@babel/preset-env'],
         plugins: [
-          [
-            'i18next-extract',
-            {
-              locales: ['ua', 'en'],
-              keyAsDefaultValue: true,
-            },
-          ],
           [
             '@babel/plugin-transform-typescript',
             {
@@ -50,7 +45,7 @@ function buildBabelLoader({ isTsx }: BuildBabelLoaderProps) {
             },
           ],
           '@babel/plugin-transform-runtime',
-          isTsx && [
+          isTsx && isProd && [
             babelRemovePropsPlugin,
             {
               props: ['data-testid'],
@@ -84,6 +79,7 @@ export function buildLoaders(options: BuildOptions): RuleSetRule[] {
 
   const cssLoader = {
     test: /\.s[ac]ss$/i,
+    exclude: /node_modules/,
     use: [
       isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
       {
