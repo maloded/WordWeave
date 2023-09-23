@@ -19,6 +19,8 @@ import {
 } from '../../model/consts/article';
 import cls from './ArticleListItem.module.scss';
 import { getRouteArticleDetails } from '@/shared/const/router';
+import { AppImage } from '@/shared/ui/AppImage';
+import { Skeleton } from '@/shared/ui/Skeleton';
 
 interface ArticleListItemProps {
   className?: string;
@@ -80,7 +82,8 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
             title={article.title}
           />
           {types}
-          <img
+          <AppImage
+            fallback={<Skeleton width="100%" height="250px" />}
             className={cls.img}
             alt={article.title}
             src={article.img}
@@ -117,7 +120,8 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
     >
       <Card>
         <div className={cls.imageWrapper}>
-          <img
+          <AppImage
+            fallback={<Skeleton width="200px" height="200px" />}
             className={cls.img}
             alt={article.title}
             src={article.img}
