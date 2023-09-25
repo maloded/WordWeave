@@ -618,6 +618,12 @@
       "userId": "2",
       "text": "Agreed ",
       "id": "w9t05vV"
+    },
+    {
+      "articleId": "10",
+      "userId": "2",
+      "text": "Great article",
+      "id": "hYrARhf"
     }
   ],
   "users": [
@@ -784,6 +790,13 @@
       "rate": 3,
       "feedback": "",
       "id": "N3qR5fa"
+    },
+    {
+      "userId": "2",
+      "articleId": "10",
+      "rate": 3,
+      "feedback": "",
+      "id": "_v-jdej"
     }
   ]
 }

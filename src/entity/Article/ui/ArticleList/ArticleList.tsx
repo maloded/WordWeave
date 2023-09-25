@@ -4,9 +4,9 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { Text, TextSize } from '@/shared/ui/Text';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import cls from './ArticleList.module.scss';
-import { Article } from '../../model/types/article';
 import { ArticleView } from '../../model/consts/article';
-import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeloton';
+import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
+import { Article } from '../../model/types/article';
 
 interface ArticleListProps {
   className?: string;
