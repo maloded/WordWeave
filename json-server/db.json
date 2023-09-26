@@ -624,6 +624,24 @@
       "userId": "2",
       "text": "Great article",
       "id": "hYrARhf"
+    },
+    {
+      "articleId": "10",
+      "userId": "3",
+      "text": "Yes",
+      "id": "2W8-q4p"
+    },
+    {
+      "articleId": "10",
+      "userId": "3",
+      "text": "super",
+      "id": "jdjoev8"
+    },
+    {
+      "articleId": "10",
+      "userId": "3",
+      "text": "the best",
+      "id": "X5RwLGG"
     }
   ],
   "users": [
@@ -658,6 +676,15 @@
       "id": "4",
       "username": "Ded",
       "password": "444",
+      "roles": [
+        "USER"
+      ],
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Katherine_Heigl_at_27_Dresses_Premiere_17_%28cropped%29.jpg/220px-Katherine_Heigl_at_27_Dresses_Premiere_17_%28cropped%29.jpg"
+    },
+    {
+      "id": "5",
+      "username": "test",
+      "password": "test",
       "roles": [
         "USER"
       ],
@@ -707,6 +734,17 @@
       "country": "Ukraine",
       "city": "Dnipro",
       "username": "Ded",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Katherine_Heigl_at_27_Dresses_Premiere_17_%28cropped%29.jpg/220px-Katherine_Heigl_at_27_Dresses_Premiere_17_%28cropped%29.jpg"
+    },
+    {
+      "id": "5",
+      "first": "Test",
+      "lastname": "Test",
+      "age": 22,
+      "currency": "GRN",
+      "country": "Ukraine",
+      "city": "Dnipro",
+      "username": "test",
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Katherine_Heigl_at_27_Dresses_Premiere_17_%28cropped%29.jpg/220px-Katherine_Heigl_at_27_Dresses_Premiere_17_%28cropped%29.jpg"
     }
   ],

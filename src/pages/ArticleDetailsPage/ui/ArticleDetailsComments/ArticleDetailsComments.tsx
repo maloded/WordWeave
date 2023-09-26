@@ -45,8 +45,9 @@ export const ArticleDetailsComments = memo((props: ArticleDetailsCommentsProps) 
         size={TextSize.L}
         title={t('Comments')}
       />
-      <Suspense fallback={<Loader />} />
-      <AddCommentForm onSendComment={onSendComment} />
+      <Suspense fallback={<Loader />}>
+        <AddCommentForm onSendComment={onSendComment} />
+      </Suspense>
       <CommentList isLoading={isLoadingComments} comments={comments} />
     </VStack>
   );

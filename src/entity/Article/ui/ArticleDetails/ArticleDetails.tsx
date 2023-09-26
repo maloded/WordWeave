@@ -10,7 +10,6 @@ import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
 import { Text, TextAlign, TextSize } from '@/shared/ui/Text';
 import { Skeleton } from '@/shared/ui/Skeleton';
 import { Avatar } from '@/shared/ui/Avatar';
-import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
 import CalendarIcon from '@/shared/assets/icons/calendar-20-20.svg';
 import { Icon } from '@/shared/ui/Icon';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect';
@@ -34,6 +33,7 @@ import {
   ArticleTextBlockComponent,
 } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import cls from './ArticleDetails.module.scss';
+import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
 
 interface ArticleDetailsProps {
   className?: string;
@@ -120,7 +120,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
             className={cls.avatar}
           />
         </HStack>
-        <VStack gap="4">
+        <VStack gap="4" max>
           <Text
             className={cls.title}
             title={article?.title}
@@ -147,7 +147,11 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <VStack gap="16" max className={classNames(cls.ArticleDetails, {}, [className])}>
+      <VStack
+        gap="16"
+        max
+        className={classNames(cls.ArticleDetails, {}, [className])}
+      >
         {content}
       </VStack>
     </DynamicModuleLoader>
