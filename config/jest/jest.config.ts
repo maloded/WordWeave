@@ -8,15 +8,9 @@ export default {
   },
   clearMocks: true,
   testEnvironment: 'jsdom',
-  coveragePathIgnorePatterns: [
-    '/node_modules/',
-  ],
-  moduleDirectories: [
-    'node_modules',
-  ],
-  modulePaths: [
-    '<rootDir>src',
-  ],
+  coveragePathIgnorePatterns: ['/node_modules/'],
+  moduleDirectories: ['node_modules'],
+  modulePaths: ['<rootDir>src'],
   setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
@@ -24,14 +18,7 @@ export default {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
       path.resolve(__dirname, 'jestEmptyComponent.tsx'),
   },
-  moduleFileExtensions: [
-    'js',
-    'jsx',
-    'ts',
-    'tsx',
-    'json',
-    'node',
-  ],
+  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'node'],
   rootDir: '../../',
   reporters: [
     'default',
@@ -45,9 +32,7 @@ export default {
       },
     ],
   ],
-  testMatch: [
-    '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
-  ],
+  testMatch: ['<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'],
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest',
     '\\.svg$': '<rootDir>/config/jest/svgTransformer.js',

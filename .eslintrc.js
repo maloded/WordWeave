@@ -9,8 +9,7 @@ module.exports = {
     "airbnb",
     "plugin:i18next/recommended",
     "plugin:storybook/recommended",
-    "plugin:storybook/recommended",
-    "plugin:storybook/recommended",
+    "prettier",
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -28,6 +27,7 @@ module.exports = {
     "ded-plugin",
     "unused-imports",
   ],
+  ignorePatterns: [".eslintrc.js"],
   rules: {
     "react/jsx-indent": [2, 2],
     "react/jsx-indent-props": [2, 2],
@@ -93,6 +93,7 @@ module.exports = {
         ignoreImportPatterns: ["**/StoreProvider", "**/testing"],
       },
     ],
+    "react/jsx-max-props-per-line": ['error', { maximum: 4 }],
   },
   globals: {
     __IS_DEV__: true,
@@ -101,6 +102,9 @@ module.exports = {
   },
   overrides: [
     {
+      env: {
+        node: true,
+      },
       files: ["**/src/**/*.test.{ts,tsx}", "**/src/**/*.stories.tsx"],
       rules: {
         "i18next/no-literal-string": "off",

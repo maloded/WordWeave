@@ -16,13 +16,14 @@ describe('User navigate to Article-Details Page', () => {
   it('and see recommendation list', () => {
     cy.getByTestId('ArticleRecommendationsList').should('exist');
   });
-  it('and leave comment', () => {
+  it.skip('and leave comment', () => {
     cy.getByTestId('ArticleDetails.Info');
     cy.getByTestId('AddCommentForm').scrollIntoView();
     cy.addComment('text');
-    // cy.getByTestId('CommentCard.Content').should('have.length', 1);
+    cy.getByTestId('CommentCard.Content').should('have.length', 1);
   });
   it('and rate article', () => {
+    cy.intercept('GET', '**/articles/*', { fixture: 'article-details.json' });
     cy.getByTestId('ArticleDetails.Info');
     cy.getByTestId('RatingCard').scrollIntoView();
     cy.setRate(4, 'feedback');

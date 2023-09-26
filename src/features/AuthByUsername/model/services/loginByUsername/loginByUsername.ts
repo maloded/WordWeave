@@ -8,20 +8,21 @@ interface LoginByUNProps {
   password: string;
 }
 
-export const loginByUsername = createAsyncThunk<User, LoginByUNProps, ThunkConfig<string>>(
-  'login/loginByUsername',
-  async (authData, thunkApi) => {
-    const { dispatch, extra, rejectWithValue } = thunkApi;
-    try {
-      const response = await extra.api.post<User>('/login', authData);
-      if (!response.data) throw new Error('No data');
+export const loginByUsername = createAsyncThunk<
+  User,
+  LoginByUNProps,
+  ThunkConfig<string>
+>('login/loginByUsername', async (authData, thunkApi) => {
+  const { dispatch, extra, rejectWithValue } = thunkApi;
+  try {
+    const response = await extra.api.post<User>('/login', authData);
+    if (!response.data) throw new Error('No data');
 
-      localStorage.setItem(USER_LOCALSTORAGE_KEY, JSON.stringify(response.data));
-      dispatch(userActions.setAuthData(response.data));
+    localStorage.setItem(USER_LOCALSTORAGE_KEY, JSON.stringify(response.data));
+    dispatch(userActions.setAuthData(response.data));
 
-      return response.data;
-    } catch (error) {
-      return rejectWithValue('Somthing went wrong');
-    }
-  },
-);
+    return response.data;
+  } catch (error) {
+    return rejectWithValue('Somthing went wrong');
+  }
+});

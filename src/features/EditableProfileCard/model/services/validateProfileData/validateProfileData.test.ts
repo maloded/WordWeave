@@ -44,8 +44,6 @@ describe('validateProfileData', () => {
   test('without data', async () => {
     const result = validateProfileData(undefined);
 
-    expect(result).toEqual([
-      ValidateProfileError.NO_DATA,
-    ]);
+    expect(result).toEqual([ValidateProfileError.NO_DATA]);
   });
 });

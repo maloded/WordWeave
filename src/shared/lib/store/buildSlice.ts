@@ -1,3 +1,1 @@
-export function buildSlice() {
-
-}
+export function buildSlice() {}

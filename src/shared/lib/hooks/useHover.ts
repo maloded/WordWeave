@@ -18,8 +18,8 @@ export const useHover = () => {
     setIsHover(false);
   }, []);
 
-  return useMemo((): UseHoverResult => [
-    isHover,
-    { onMouseEnter, onMouseLeave },
-  ], [isHover, onMouseEnter, onMouseLeave]);
+  return useMemo(
+    (): UseHoverResult => [isHover, { onMouseEnter, onMouseLeave }],
+    [isHover, onMouseEnter, onMouseLeave],
+  );
 };

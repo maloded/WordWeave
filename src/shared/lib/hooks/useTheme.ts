@@ -23,7 +23,8 @@ export function useTheme(): UseThemeResult {
     case Theme.GREEN:
       newTheme = Theme.DARK;
       break;
-    default: newTheme = Theme.LIGHT;
+    default:
+      newTheme = Theme.LIGHT;
     }
     setTheme?.(newTheme);
     document.body.className = newTheme;

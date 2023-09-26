@@ -1,0 +1,33 @@
+{
+  "id": "11",
+  "title": "Rust Trends",
+  "subtitle": "Top JS trends you should follow in 2023",
+  "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Rust_programming_language_black_logo.svg/80px-Rust_programming_language_black_logo.svg.png",
+  "views": 22,
+  "createdAt": "02.09.2023",
+  "userId": "1",
+  "type": [
+    "IT, Financial"
+  ],
+  "blocks": [
+    {
+      "id": "1",
+      "type": "TEXT",
+      "title": "Hello, world!",
+      "paragraphs": [
+        "The program traditionally called 'Hello, world!' is very simple. It outputs the phrase 'Hello, world!' or something similar using the capabilities of a certain language.",
+        "JavaScript is a language in which programs can be executed in various environments. In our case, we are talking about browsers and the server platform Node.js. If you haven't written a single line of JS code so far and are reading this text in a browser on your desktop computer, it means you are just seconds away from your first JavaScript program.",
+        "There are other ways to run JS code in a browser. For example, when it comes to using JavaScript programs conventionally, they are loaded into the browser to enable the functionality of web pages. Typically, code is organized in separate files with the .js extension, which are then linked to web pages. However, you can also include program code directly within the page's code. All of this is done using the <script> tag. When the browser detects such code, it executes it. You can find details about the script tag on the website w3school.com. In particular, let's look at an example demonstrating working with a web page using JavaScript, provided on this resource. You can run this example using the resource's capabilities (look for the 'Try it Yourself' button), but we will do it a bit differently. Specifically, we will create a new file in some text editor (for example, in VS Code or Notepad++) and name it hello.html. Then, add the following code to it:"
+      ]
+    }
+  ],
+  "user": {
+    "id": "1",
+    "username": "admin",
+    "password": "111",
+    "roles": [
+      "ADMIN"
+    ],
+    "avatar": "https://images.unsplash.com/photo-1494959764136-6be9eb3c261e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+  }
+}
