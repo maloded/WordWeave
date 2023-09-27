@@ -29,6 +29,6 @@
     "./src/**/*.ts",
     "./src/**/*.tsx",
     "src/features/AuthByUsername/model/selectors/getLoginError"
-  ],
+, "scripts/removeFeature.ts"  ],
   "exclude": ["cypress.config.ts"]
 }

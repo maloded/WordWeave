@@ -710,6 +710,14 @@
       "roles": [
         "ADMIN"
       ],
+      "features": {
+        "isArticleRatingEnabled": true
+      },
+      "jsonSettings": {
+        "theme": "app_green",
+        "isFirstVisit": false,
+        "settingsPageHasBeenOpen": false
+      },
       "avatar": "https://images.unsplash.com/photo-1494959764136-6be9eb3c261e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
     },
     {
@@ -719,6 +727,14 @@
       "roles": [
         "USER"
       ],
+      "features": {
+        "isArticleRatingEnabled": true
+      },
+      "jsonSettings": {
+        "theme": "app_light",
+        "isFirstVisit": true,
+        "settingsPageHasBeenOpen": true
+      },
       "avatar": "http://zornet.ru/_fr/90/1942736.jpg"
     },
     {
@@ -728,6 +744,14 @@
       "roles": [
         "MANAGER"
       ],
+      "features": {
+        "isArticleRatingEnabled": false
+      },
+      "jsonSettings": {
+        "theme": "app_dark",
+        "isFirstVisit": true,
+        "settingsPageHasBeenOpen": false
+      },
       "avatar": "https://static.wixstatic.com/media/dd6e92_4e7d5ecd036c40579f800ac3c59fa7e1~mv2.jpg/v1/crop/x_0,y_60,w_1080,h_1560/fill/w_438,h_636,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Randy%20Hemann.jpg"
     },
     {
@@ -737,6 +761,14 @@
       "roles": [
         "USER"
       ],
+      "features": {
+        "isArticleRatingEnabled": true
+      },
+      "jsonSettings": {
+        "theme": "app_green",
+        "isFirstVisit": true,
+        "settingsPageHasBeenOpen": false
+      },
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Katherine_Heigl_at_27_Dresses_Premiere_17_%28cropped%29.jpg/220px-Katherine_Heigl_at_27_Dresses_Premiere_17_%28cropped%29.jpg"
     },
     {
@@ -746,6 +778,14 @@
       "roles": [
         "USER"
       ],
+      "features": {
+        "isArticleRatingEnabled": true
+      },
+      "jsonSettings": {
+        "theme": "app_green",
+        "isFirstVisit": true,
+        "settingsPageHasBeenOpen": false
+      },
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Katherine_Heigl_at_27_Dresses_Premiere_17_%28cropped%29.jpg/220px-Katherine_Heigl_at_27_Dresses_Premiere_17_%28cropped%29.jpg"
     }
   ],

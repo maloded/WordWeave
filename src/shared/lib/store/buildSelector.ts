@@ -9,4 +9,4 @@ export function buildSelector<T, Args extends Array<any>>(selector: Selector<T, 
   // eslint-disable-next-line max-len
   const useSelectorHook: Hook<T, Args> = (...args: Args) => useSelector((state: StateSchema) => selector(state, ...args));
   return [useSelectorHook, selector];
-}
+};
