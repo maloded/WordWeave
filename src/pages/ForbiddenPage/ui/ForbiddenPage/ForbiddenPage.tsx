@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Page } from '@/widgets/Page';
-import { Text, TextAlign } from '@/shared/ui/Text';
+import { Text } from '@/shared/ui/Text';
 
 interface ForbiddenPageProps {
   className?: string;
@@ -16,7 +16,7 @@ export const ForbiddenPage = memo((props: ForbiddenPageProps) => {
 
   return (
     <Page data-testid="ForbiddenPage" className={classNames('', {}, [className])}>
-      <Text align={TextAlign.CENTER} title={t('The page is forbidden for you!')} />
+      <Text align="center" title={t('The page is forbidden for you!')} />
     </Page>
   );
 });

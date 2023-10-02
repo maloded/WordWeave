@@ -10,12 +10,14 @@ import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
 import {
   articlesPageReducer,
 } from '../../model/slices/articlesPageSlice';
-import { ArticlesPageFilter } from '../ArticlesPageFilter/ArticlesPageFilter';
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList';
 import cls from './ArticlesPage.module.scss';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect';
 import { initArticlesPage } from '../../model/services/initArticesPage/initArticesPage';
+import { StickyContentLayout } from '@/shared/layouts/StickyContentLayout';
+import { ViewSelectorContainer } from '../ViewSelectorContainer/ViewSelectorContainer';
+import { FiltersContainer } from '../FiltersContainer/FiltersContainer';
 
 interface ArticlesPageProps {
   className?: string;
@@ -41,16 +43,23 @@ const ArticlesPage = (props: ArticlesPageProps) => {
     dispatch(initArticlesPage(searchParams));
   });
 
+  const content = (
+    <Page
+      data-testid="ArticlesPage"
+      onScrollEnd={onLoadNextPart}
+      className={classNames(cls.ArticlesPage, {}, [className])}
+    >
+      <ArticleInfiniteList className={cls.list} />
+    </Page>
+  );
+
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
-      <Page
-        data-testid="ArticlesPage"
-        onScrollEnd={onLoadNextPart}
-        className={classNames(cls.ArticlesPage, {}, [className])}
-      >
-        <ArticlesPageFilter />
-        <ArticleInfiniteList className={cls.list} />
-      </Page>
+      <StickyContentLayout
+        left={<ViewSelectorContainer />}
+        right={<FiltersContainer />}
+        content={content}
+      />
     </DynamicModuleLoader>
   );
 };

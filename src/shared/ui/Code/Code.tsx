@@ -1,7 +1,7 @@
 import { memo, useCallback } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import CopyIcon from '@/shared/assets/icons/copy-20-20.svg';
-import { Button, ButtonTheme } from '../Button/Button';
+import { Button } from '../Button/Button';
 import cls from './Code.module.scss';
 
 interface CodeProps {
@@ -23,7 +23,7 @@ export const Code = memo((props: CodeProps) => {
     <pre className={classNames(cls.Code, {}, [className])}>
       <Button
         onClick={onCopy}
-        theme={ButtonTheme.CLEAR}
+        variant="clear"
         className={cls.copyBtn}
       >
         <CopyIcon className={cls.copyIcon} />

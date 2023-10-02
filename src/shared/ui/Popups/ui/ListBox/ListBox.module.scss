@@ -1,14 +1,18 @@
 .options {
   cursor: pointer;
-  background: var(--listbox-bg);
+  background: var(--dark-bg);
   position: absolute;
-  z-index: vaar(--listbox-z-index);
+  z-index: var(--listbox-z-index);
   border-radius: 12px;
-  box-shadow: 4px 4px 8px var(--listbox-bg);
+  box-shadow: 4px 4px 8px var(--dark-bg);
 
   .top {
     bottom: 100%;
   }
+}
+
+.selected {
+  background: var(--light-bg);
 }
 
 .item {

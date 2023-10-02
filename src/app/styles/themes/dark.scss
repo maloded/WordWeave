@@ -1,4 +1,24 @@
-:root,
+// :root,
+// .app_dark {
+//   --bg-color: rgb(12 12 82);
+//   --bg-code-color: #1515ad;
+//   --inverted-bg-color: rgb(188 237 226);
+//   --primary-color: rgb(162 240 224);
+//   --secondary-color: rgb(194 221 215);
+//   --inverted-primary-color: rgb(12 12 82);
+//   --inverted-secondary-color: rgb(44 44 125);
+
+//   // skeleton
+//   --skeleton-shadow: #2b2be8;
+//   --skeleton-color: #1515ad;
+
+//   // card
+//   --card-bg: rgb(18 18 118);
+
+//   // listBox
+//   --listbox-bg: rgb(18 18 118);
+// }
+
 .app_dark {
   --bg-color: rgb(12 12 82);
   --bg-code-color: #1515ad;
@@ -8,13 +28,27 @@
   --inverted-primary-color: rgb(12 12 82);
   --inverted-secondary-color: rgb(44 44 125);
 
+  // redesigned
+  --dark-bg: #090f11;
+  --bg: #0c1214;
+  --light-bg: #151c1f;
+  --text: #dbdbdb;
+  --hint: #555;
+  --cancel: #d95757;
+  --save: #6cd98b;
+  --icon: #74a2b2;
+  --accent: #5ed3f3;
+
   // skeleton
-  --skeleton-shadow: #2b2be8;
   --skeleton-color: #1515ad;
+  --skeleton-shadow: #2b2be8;
+
+  // code
+  --code-bg: #12128c;
 
   // card
-  --card-bg: rgb(18 18 118);
+  --card-bg: #101079;
 
-  // listBox
-  --listbox-bg: rgb(18 18 118);
+  // listbox
+  --listbox-bg: #101079;
 }

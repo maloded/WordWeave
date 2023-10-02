@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Button, ButtonTheme } from '@/shared/ui/Button';
+import { Button } from '@/shared/ui/Button';
 import { getArticleDetailsData } from '@/entity/Article';
 import { HStack } from '@/shared/ui/Stack';
 import { getCanEditArticle } from '../../model/selectors/article';
@@ -40,14 +40,14 @@ export const ArticleDetailsPageHeader = memo((props: ArticleDetailsPageHeaderPro
       className={classNames('', {}, [className])}
     >
       <Button
-        theme={ButtonTheme.OUTLINE}
+        variant="outline"
         onClick={onBackToList}
       >
         {t('Back to list')}
       </Button>
       {canEdit && (
         <Button
-          theme={ButtonTheme.OUTLINE}
+          variant="outline"
           onClick={onEditArticle}
         >
           {t('Refactor')}

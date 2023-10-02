@@ -3,11 +3,11 @@ import { memo, useCallback, useState } from 'react';
 import { BrowserView, MobileView } from 'react-device-detect';
 import { Card } from '@/shared/ui/Card';
 import { HStack, VStack } from '@/shared/ui/Stack';
-import { Text, TextAlign } from '@/shared/ui/Text';
+import { Text } from '@/shared/ui/Text';
 import { StarRating } from '@/shared/ui/StarRating';
 import { Modal } from '@/shared/ui/Modal';
 import { Input } from '@/shared/ui/Input';
-import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button';
+import { Button } from '@/shared/ui/Button';
 import { Drawer } from '@/shared/ui/Drawer';
 
 interface RatingProps {
@@ -56,7 +56,7 @@ export const Rating = memo((props: RatingProps) => {
 
   const modalContent = (
     <>
-      <Text title={feedbackTitle} align={TextAlign.CENTER} />
+      <Text title={feedbackTitle} align="center" />
       <Input
         data-testid="RatingCard.Input"
         value={feedback}
@@ -86,13 +86,14 @@ export const Rating = memo((props: RatingProps) => {
               <HStack max gap="16" justify="end">
                 <Button
                   data-testid="RatingCard.Close"
-                  theme={ButtonTheme.OUTLINE_RED}
+                  color="error"
                   onClick={cancelHandler}
                 >
                   {t('Close')}
                 </Button>
                 <Button
                   data-testid="RatingCard.Send"
+                  color="success"
                   onClick={acceptHandler}
                 >
                   {t('Send')}
@@ -108,7 +109,8 @@ export const Rating = memo((props: RatingProps) => {
               <Button
                 fullWidth
                 onClick={acceptHandler}
-                size={ButtonSize.L}
+                size="l"
+                color="success"
               >
                 {t('Send')}
               </Button>

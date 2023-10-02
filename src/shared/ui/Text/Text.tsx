@@ -2,29 +2,18 @@ import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Text.module.scss';
 
-export enum TextTheme {
-  PRIMARY = 'primary',
-  INVERTED = 'inverted',
-  ERROR = 'error',
-}
+export type TextVariant = 'primary' | 'error' | 'accent';
 
-export enum TextAlign {
-  RIGHT = 'right',
-  CENTER = 'center',
-  LEFT = 'left',
-}
+export type TextAlign = 'righ' | 'center' | 'left';
 
-export enum TextSize {
-  S = 'size_s',
-  M = 'size_m',
-  L = 'size_l',
-}
+export type TextSize = 's' | 'm' | 'l';
+
 
 interface TextProps {
   className?: string;
   title?: string;
   text?: string;
-  theme?: TextTheme;
+  variant?: TextVariant;
   align?: TextAlign;
   size?: TextSize;
 
@@ -33,10 +22,16 @@ interface TextProps {
 
 type HeaderTagType = 'h1' | 'h2' | 'h3';
 
+const mapSizeToClass: Record<TextSize, string> = {
+  s: 'size-s',
+  m: 'size-m',
+  l: 'size-l',
+};
+
 const mapSizeToHeaderTag: Record<TextSize, HeaderTagType> = {
-  size_s: 'h3',
-  size_m: 'h2',
-  size_l: 'h3',
+  s: 'h3',
+  m: 'h2',
+  l: 'h3',
 };
 
 export const Text = memo((props: TextProps) => {
@@ -44,16 +39,19 @@ export const Text = memo((props: TextProps) => {
     className,
     title,
     text,
-    theme = TextTheme.PRIMARY,
-    align = TextAlign.LEFT,
-    size = TextSize.M,
+    variant = 'primary',
+    align = 'left',
+    size = 'm',
     'data-testid': dataTestidId = 'Text',
   } = props;
 
   const HeaderTag = mapSizeToHeaderTag[size];
+  const sizeClass = mapSizeToClass[size];
+
+  const addClasses = [className, cls[variant], cls[align], sizeClass];
 
   return (
-    <div className={classNames(cls.Text, {}, [className, cls[theme], cls[align], cls[size]])}>
+    <div className={classNames(cls.Text, {}, addClasses)}>
       {title && (
         <HeaderTag
           className={cls.title}

@@ -2,16 +2,14 @@ import { useTranslation } from 'react-i18next';
 import { memo, useCallback, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Button, ButtonTheme } from '@/shared/ui/Button';
+import { Button } from '@/shared/ui/Button';
 import { LoginModal } from '@/features/AuthByUsername';
 import { getUserAuthData } from '@/entity/User';
-import { Text, TextTheme } from '@/shared/ui/Text';
-import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
+
 import { HStack } from '@/shared/ui/Stack';
 import { NotificationButton } from '@/features/NotificationButton';
 import { AvatarDropdown } from '@/features/AvatarDropdown';
 import cls from './Navbar.module.scss';
-import { getRouteArticleCreate } from '@/shared/const/router';
 
 interface NavbarProps {
   className?: string;
@@ -33,17 +31,6 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   if (authData) {
     return (
       <header className={classNames(cls.Navbar, {}, [className])}>
-        <Text
-          className={cls.appName}
-          title={t('Word Weave')}
-          theme={TextTheme.INVERTED}
-        />
-        <AppLink
-          to={getRouteArticleCreate()}
-          theme={AppLinkTheme.SECONDARY}
-        >
-          {t('Create article')}
-        </AppLink>
         <HStack gap="16" className={cls.actions}>
           <NotificationButton />
           <AvatarDropdown />
@@ -55,7 +42,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   return (
     <header className={classNames(cls.Navbar, {}, [className])}>
       <Button
-        theme={ButtonTheme.CLEAR_INVERTED}
+        variant="clear"
         className={cls.links}
         onClick={onShowModal}
       >

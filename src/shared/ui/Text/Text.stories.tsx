@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Text, TextSize, TextTheme } from './Text';
+import { Text } from './Text';
 import { Theme } from '@/shared/const/theme';
 
 const meta: Meta<typeof Text> = {
@@ -23,7 +23,7 @@ export const PrimarySizeS: Story = {
   args: {
     title: 'TitleTitle',
     text: 'TextTextText',
-    size: TextSize.S,
+    size: 's',
   },
 };
 
@@ -31,11 +31,11 @@ export const PrimarySizeL: Story = {
   args: {
     title: 'TitleTitle',
     text: 'TextTextText',
-    size: TextSize.L,
+    size: 'l',
   },
 };
 
-export const PrimatyDark: Story = {
+export const PrimaryDark: Story = {
   decorators: [ThemeDecorator(Theme.DARK)],
   args: {
     title: 'TitleTitle',
@@ -51,22 +51,18 @@ export const PrimatyGreen: Story = {
   },
 };
 
+export const Accent: Story = {
+  args: {
+    title: 'TitleTitle',
+    text: 'TextTextText',
+    variant: 'accent',
+  },
+};
+
 export const Error: Story = {
   args: {
     title: 'TitleTitle',
     text: 'TextTextText',
-    theme: TextTheme.ERROR,
-  },
-};
-
-export const OnlyTitle: Story = {
-  args: {
-    title: 'TitleTitle',
-  },
-};
-
-export const OnlyText: Story = {
-  args: {
-    text: 'TextTextText',
+    variant: 'error',
   },
 };

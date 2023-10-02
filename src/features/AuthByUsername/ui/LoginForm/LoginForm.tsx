@@ -2,9 +2,9 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { memo, useCallback } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Button, ButtonTheme } from '@/shared/ui/Button';
+import { Button } from '@/shared/ui/Button';
 import { Input } from '@/shared/ui/Input';
-import { Text, TextTheme } from '@/shared/ui/Text';
+import { Text } from '@/shared/ui/Text';
 import {
   DynamicModuleLoader,
   ReducersList,
@@ -60,7 +60,7 @@ const LoginForm = memo((props: LoginFormProps) => {
     <DynamicModuleLoader reducers={initialReducers}>
       <div className={classNames(cls.LoginForm, {}, [className])}>
         <Text title={t('Form authorization')} />
-        {error && <Text text={t('Incorrect username or password')} theme={TextTheme.ERROR} />}
+        {error && <Text text={t('Incorrect username or password')} variant="error" />}
         <Input
           type=""
           className={cls.input}
@@ -78,7 +78,7 @@ const LoginForm = memo((props: LoginFormProps) => {
         />
         <Button
           className={cls.loginBtn}
-          theme={ButtonTheme.OUTLINE}
+          variant="outline"
           onClick={onLoginClick}
           disabled={isLoading}
         >

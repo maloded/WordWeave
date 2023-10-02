@@ -3,7 +3,7 @@ import { useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Text } from '@/shared/ui/Text';
-import { Button, ButtonTheme } from '@/shared/ui/Button';
+import { Button } from '@/shared/ui/Button';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
 import { HStack } from '@/shared/ui/Stack';
 import { getCanEditProfile } from '../../model/selectors/getCanEditProfile/getCanEditProfile';
@@ -50,7 +50,7 @@ export const EditableProfileCardHeader = (props: EditableProfileCardHeaderProps)
           {readonly
             ? (
               <Button
-                theme={ButtonTheme.OUTLINE}
+                variant="outline"
                 onClick={onEdit}
                 data-testid="EditableProfileCardHeader.EditButton"
               >
@@ -60,14 +60,15 @@ export const EditableProfileCardHeader = (props: EditableProfileCardHeaderProps)
             : (
               <HStack gap="8">
                 <Button
-                  theme={ButtonTheme.OUTLINE_RED}
+                  variant="outline"
+                  color="error"
                   onClick={onCancelEdit}
                   data-testid="EditableProfileCardHeader.CancelButton"
                 >
                   {t('Cancel')}
                 </Button>
                 <Button
-                  theme={ButtonTheme.OUTLINE}
+                  variant="outline"
                   onClick={onSaveEdit}
                   data-testid="EditableProfileCardHeader.SaveButton"
                 >

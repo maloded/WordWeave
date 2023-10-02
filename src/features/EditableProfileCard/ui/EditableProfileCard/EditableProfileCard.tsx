@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { useCallback, memo } from 'react';
 import { useSelector } from 'react-redux';
-import { Text, TextTheme } from '@/shared/ui/Text';
+import { Text } from '@/shared/ui/Text';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
 import { Currency } from '@/entity/Currency';
 import { Country } from '@/entity/Country';
@@ -109,7 +109,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
         {validateErrors?.length && validateErrors.map((err) => (
           <Text
             key={err}
-            theme={TextTheme.ERROR}
+            variant="error"
             text={t(err)}
             data-testid="EditableProfileCard.Error"
           />

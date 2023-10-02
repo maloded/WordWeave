@@ -8,6 +8,8 @@ import { AppRouter } from './providers/router';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
 import { PageLoader } from '@/widgets/PageLoader';
 import { useTheme } from '@/shared/lib/hooks/useTheme';
+import { MainLayout } from '@/shared/layouts/MainLayout';
+import { Text } from '@/shared/ui/Text';
 
 const App = () => {
   const dispatch = useAppDispatch();
@@ -21,14 +23,17 @@ const App = () => {
     return <PageLoader />
   }
 
+  const toolbar = <Text title="Hello" />
+
   return (
     <div className={classNames('app', {}, [theme])}>
       <Suspense fallback="">
-        <Navbar />
-        <div className="content-page">
-          <Sidebar />
-          {inited && <AppRouter />}
-        </div>
+        <MainLayout
+          header={<Navbar />}
+          content={<AppRouter />}
+          sidebar={<Sidebar />}
+          toolbar={toolbar}
+        />
       </Suspense>
     </div>
   );

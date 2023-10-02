@@ -7,7 +7,7 @@ import {
   ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
-import { Text, TextAlign, TextSize } from '@/shared/ui/Text';
+import { Text } from '@/shared/ui/Text';
 import { Skeleton } from '@/shared/ui/Skeleton';
 import { Avatar } from '@/shared/ui/Avatar';
 import CalendarIcon from '@/shared/assets/icons/calendar-20-20.svg';
@@ -107,7 +107,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
     content = (
       <Text
         title={t('Download error')}
-        align={TextAlign.CENTER}
+        align="center"
       />
     );
   } else {
@@ -125,7 +125,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
             className={cls.title}
             title={article?.title}
             text={article?.subtitle}
-            size={TextSize.L}
+            size="l"
           />
           <HStack gap="8">
             <Icon className={cls.icon} Svg={EyeIcon} />

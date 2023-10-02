@@ -1,20 +1,52 @@
-:root,
+// :root,
+// .app_green {
+//   --bg-color: #f8faf5;
+//   --bg-code-color: #c4f373;
+//   --inverted-bg-color: #415321;
+//   --primary-color: #203716;
+//   --secondary-color: #283716;
+//   --inverted-primary-color: #f8faf5;
+//   --inverted-secondary-color: #f4faeb;
+
+//   // skeleton
+//   --skeleton-shadow: #3d4f28;
+//   --skeleton-color: #415321;
+
+//   // card
+//   --card-bg: #d9e2ca;
+
+//   // listBox
+//   --listbox-bg: #d9e2ca;
+// }
 .app_green {
-  --bg-color: #f8faf5;
-  --bg-code-color: #c4f373;
-  --inverted-bg-color: #415321;
-  --primary-color: #203716;
-  --secondary-color: #283716;
-  --inverted-primary-color: #f8faf5;
-  --inverted-secondary-color: #f4faeb;
+  --bg-color: #fbf7f4;
+  --inverted-bg-color: #483c32;
+  --primary-color: #302321;
+  --secondary-color: #1f1c16;
+  --inverted-primary-color: #fbf7f4;
+  --inverted-secondary-color: #302321;
+
+  // redesigned
+  --dark-bg: #f4efe7;
+  --bg: #faf7f2;
+  --light-bg: #fffbf7;
+  --text: #3d3a37;
+  --hint: #928c86;
+  --cancel: #ff7575;
+  --save: #75de9b;
+  --icon: #6ed3c1;
+  --accent: #00c8b3;
 
   // skeleton
-  --skeleton-shadow: #3d4f28;
-  --skeleton-color: #415321;
+  --skeleton-color: #fbf7f4;
+  --skeleton-shadow: #7c6959;
+
+  // code
+  --code-bg: #806c5d;
 
   // card
-  --card-bg: #d9e2ca;
+  --card-bg: #bebebe;
 
-  // listBox
-  --listbox-bg: #d9e2ca;
+  // listbox
+  --listbox-bg: #bebebe;
 }

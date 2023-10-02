@@ -1,12 +1,64 @@
+.addonLeft,
+.addonRight {
+  display: flex;
+}
+
+.addonLeft svg,
+.addonRight svg {
+  color: var(--hint);
+}
+
 .Button {
   cursor: pointer;
-  padding: 6px 15px;
+  color: var(--text);
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
 
-  &:hover {
-    opacity: 0.8;
-    fill-opacity: 80%;
-    stroke-opacity: 80%;
+  &:not(:disabled):hover {
+    color: var(--accent);
+
+    .addonLeft svg,
+    .addonRight svg {
+      color: var(--accent);
+    }
   }
+}
+
+.filled {
+  background: var(--light-bg);
+  border: none;
+  outline: none;
+  border-radius: 34px;
+
+  &.normal {
+    &:hover {
+      color: var(--text);
+      opacity: 0.75;
+    }
+  }
+
+  &.error {
+    background: var(--cancel);
+
+    &:hover {
+      color: var(--text);
+      opacity: 0.75;
+    }
+  }
+
+  &.success {
+    background: var(--save);
+
+    &:hover {
+      color: var(--text);
+      opacity: 0.75;
+    }
+  }
+}
+
+.withAddon {
+  padding: 0 16px;
 }
 
 .clear,
@@ -17,65 +69,73 @@
   outline: none;
 }
 
-.clearInverted {
-  color: var(--inverted-primary-color);
-}
-
 .outline {
-  border: 1px solid var(--primary-color);
-  color: var(--primary-color);
   background: none;
-}
+  border: 2px solid var(--icon);
+  border-radius: 34px;
 
-.outlineRed {
-  border: 1px solid var(--red-light);
-  color: var(--red-dark);
-  background: none;
-}
+  &:hover {
+    border: 2px solid var(--accent);
+  }
 
-.background {
-  background: var(--bg-color);
-  color: var(--primary-color);
-  border: none;
-}
+  &.normal {
+    border: 2px solid var(--icon);
 
-.backgroundInverted {
-  background: var(--inverted-bg-color);
-  color: var(--inverted-primary-color);
-  border: none;
+    &:hover {
+      border: 2px solid var(--accent);
+    }
+  }
+
+  &.error {
+    border: 2px solid var(--cancel);
+
+    &:hover {
+      color: var(--cancel);
+      opacity: 0.75;
+    }
+  }
+
+  &.success {
+    border: 2px solid var(--save);
+
+    &:hover {
+      color: var(--save);
+      opacity: 0.75;
+    }
+  }
 }
 
 .square {
   padding: 0;
 }
 
-.square.size_m {
+.square.m {
   width: var(--font-line-m);
   height: var(--font-line-m);
   font: var(--font-m);
 }
 
-.square.size_l {
+.square.l {
   width: var(--font-line-l);
   height: var(--font-line-l);
   font: var(--font-l);
 }
 
-.square.size_xl {
+.square.xl {
   width: var(--font-line-xl);
   height: var(--font-line-xl);
   font: var(--font-xl);
 }
 
-.size_m {
+.m {
   font: var(--font-m);
 }
 
-.size_l {
+.l {
   font: var(--font-l);
 }
 
-.size_xl {
+.xl {
   font: var(--font-xl);
 }
 

@@ -43,6 +43,7 @@ export const ArticleTypeTabs = memo((props: ArticleTypeTabsProps) => {
 
   return (
     <Tab
+      direction="column"
       tabs={typeTabs}
       value={value}
       onTabClick={onChangeType}

@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Mods, classNames } from '@/shared/lib/classNames/classNames';
-import { Text, TextAlign, TextTheme } from '@/shared/ui/Text';
+import { Text } from '@/shared/ui/Text';
 import { Input } from '@/shared/ui/Input';
 import { Loader } from '@/shared/ui/Loader';
 import { Avatar } from '@/shared/ui/Avatar';
@@ -67,8 +67,8 @@ export const ProfileCard = (props: ProfileCardProps) => {
         <Text
           title={t('Somthing went wrong with loading profile')}
           text={t('Try refreshing the page')}
-          theme={TextTheme.ERROR}
-          align={TextAlign.CENTER}
+          variant="error"
+          align="center"
         />
       </HStack>
     );

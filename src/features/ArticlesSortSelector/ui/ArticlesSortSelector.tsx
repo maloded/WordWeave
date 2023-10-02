@@ -1,9 +1,10 @@
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { classNames } from '@/shared/lib/classNames/classNames';
-import { Select, SelectOption } from '@/shared/ui/Select';
-import cls from './ArticlesSortSelector.module.scss';
+import { SelectOption } from '@/shared/ui/Select';
 import { ArticlesSortField } from '../model/types/sort';
+import { ListBox } from '@/shared/ui/Popups';
+import { VStack } from '@/shared/ui/Stack';
+import { Text } from '@/shared/ui/Text';
 
 interface ArticlesSortSelectorProps {
   className?: string;
@@ -51,20 +52,21 @@ export const ArticlesSortSelector = memo((props: ArticlesSortSelectorProps) => {
   ], [t]);
 
   return (
-    <div className={classNames(cls.ArticlesSortSelector, {}, [className])}>
-      <Select<ArticlesSortField>
-        options={sortFieldOptions}
-        label={t('Sort by')}
+    <VStack
+      gap="8"
+      className={className}
+    >
+      <Text text={t('Sort by')} />
+      <ListBox
+        items={sortFieldOptions}
         value={sort}
         onChange={onChangeSort}
       />
-      <Select<SortOrder>
-        options={orderOptions}
-        label={t('By')}
+      <ListBox
+        items={orderOptions}
         value={order}
         onChange={onChangeOrder}
-        className={cls.order}
       />
-    </div>
+    </VStack>
   );
 });

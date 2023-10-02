@@ -6,7 +6,7 @@ import { Icon } from '@/shared/ui/Icon';
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
 import { Card } from '@/shared/ui/Card';
 import { Avatar } from '@/shared/ui/Avatar';
-import { Button, ButtonTheme } from '@/shared/ui/Button';
+import { Button } from '@/shared/ui/Button';
 import { AppLink } from '@/shared/ui/AppLink';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import {
@@ -103,7 +103,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
               to={getRouteArticleDetails(article.id)}
             >
               <Button
-                theme={ButtonTheme.OUTLINE}
+                variant="outline"
               >
                 {t('Continue read')}
               </Button>
