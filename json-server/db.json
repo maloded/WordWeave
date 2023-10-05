@@ -322,7 +322,7 @@
       "title": "Python Trends",
       "subtitle": "Top JS trends you should follow in 2023",
       "img": "https://static-assets.codecademy.com/assets/course-landing-page/meta/4x3/learn-python-3.jpg",
-      "views": 119,
+      "views": 1,
       "createdAt": "08.09.2023",
       "userId": "1",
       "type": [
@@ -556,58 +556,6 @@
           ]
         }
       ]
-    },
-    {
-      "title": "TESTING ARTICLE",
-      "subtitle": "Node.js",
-      "img": "https://i.ytimg.com/vi/umVoV4ak0HA/maxresdefault.jpg",
-      "views": 11022,
-      "createdAt": "25.09.2023",
-      "userId": "1",
-      "type": [
-        "IT"
-      ],
-      "blocks": [],
-      "id": "WmyyzE7"
-    },
-    {
-      "title": "TESTING ARTICLE",
-      "subtitle": "Node.js",
-      "img": "https://i.ytimg.com/vi/umVoV4ak0HA/maxresdefault.jpg",
-      "views": 11022,
-      "createdAt": "25.09.2023",
-      "userId": "1",
-      "type": [
-        "IT"
-      ],
-      "blocks": [],
-      "id": "4zsExh6"
-    },
-    {
-      "title": "TESTING ARTICLE",
-      "subtitle": "Node.js",
-      "img": "https://i.ytimg.com/vi/umVoV4ak0HA/maxresdefault.jpg",
-      "views": 11022,
-      "createdAt": "25.09.2023",
-      "userId": "1",
-      "type": [
-        "IT"
-      ],
-      "blocks": [],
-      "id": "sG5QxdD"
-    },
-    {
-      "title": "TESTING ARTICLE",
-      "subtitle": "Node.js",
-      "img": "https://i.ytimg.com/vi/umVoV4ak0HA/maxresdefault.jpg",
-      "views": 11022,
-      "createdAt": "25.09.2023",
-      "userId": "1",
-      "type": [
-        "IT"
-      ],
-      "blocks": [],
-      "id": "gd66SmA"
     }
   ],
   "comments": [
@@ -700,6 +648,18 @@
       "userId": "3",
       "text": "Hello",
       "id": "c_ElQev"
+    },
+    {
+      "articleId": "10",
+      "userId": "1",
+      "text": "Great article! I found the content to be insightful and well-researched. The author's perspective on [topic mentioned in the article] is thought-provoking, and I appreciate the effort they put into explaining complex concepts in an easy-to-understand manner. This article has provided me with valuable information, and I look forward to reading more from this author in the future. Keep up the excellent work!",
+      "id": "QU3msgK"
+    },
+    {
+      "articleId": "4",
+      "userId": "1",
+      "text": "Great",
+      "id": "wBa-gOR"
     }
   ],
   "users": [
@@ -765,7 +725,7 @@
         "isArticleRatingEnabled": true
       },
       "jsonSettings": {
-        "theme": "app_green",
+        "theme": "app_dark",
         "isFirstVisit": true,
         "settingsPageHasBeenOpen": false
       },
@@ -793,7 +753,7 @@
     {
       "id": "1",
       "first": "Oleksii",
-      "lastname": "Ded",
+      "lastname": "Dedd",
       "age": 26,
       "currency": "USD",
       "country": "USA",
@@ -939,6 +899,26 @@
       "articleId": "4",
       "rate": 4,
       "id": "PdnUCXb"
+    },
+    {
+      "userId": "1",
+      "articleId": "25",
+      "rate": 3,
+      "feedback": "The best",
+      "id": "MFtFM-k"
+    },
+    {
+      "userId": "1",
+      "articleId": "10",
+      "rate": 3,
+      "id": "9udcfn0"
+    },
+    {
+      "userId": "1",
+      "articleId": "4",
+      "rate": 4,
+      "feedback": "Hello",
+      "id": "IMHFgkh"
     }
   ]
 }

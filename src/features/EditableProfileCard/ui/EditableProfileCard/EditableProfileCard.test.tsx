@@ -17,6 +17,7 @@ const profile: Profile = {
   country: Country.UKRAINE,
   city: 'Kiev',
   username: 'admin213',
+  avatar: '',
 };
 
 const options = {

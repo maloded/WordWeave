@@ -3,12 +3,14 @@ import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './ArticlesFilters.module.scss';
 import { ArticleTypeTabs } from '@/features/ArticleTypeTabs';
-import {  ArticleType } from '@/entity/Article';
+import { ArticleType } from '@/entity/Article';
 import { Input } from '@/shared/ui/Input';
 import { Card } from '@/shared/ui/Card';
 import { VStack } from '@/shared/ui/Stack';
 import { ArticlesSortField, ArticlesSortSelector } from '@/features/ArticlesSortSelector';
 import { TabItem } from '@/shared/ui/Tab';
+import SearchIcon from '@/shared/assets/icons/search.svg';
+import { Icon } from '@/shared/ui/Icon';
 
 interface ArticlesFiltersProps {
     className?: string;
@@ -43,6 +45,7 @@ export const ArticlesFilters = memo((props: ArticlesFiltersProps) => {
     >
       <VStack gap="32">
         <Input
+          addonLeft={<Icon Svg={SearchIcon} />}
           onChange={onChangeSearch}
           value={search}
           placeholder={t('Search')}

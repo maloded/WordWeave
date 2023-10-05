@@ -23,6 +23,7 @@
   "Leave your comment here": "Leave your comment here",
   "Close": "Close",
   "Send": "Send",
+  "Edit": "Edit",
   "Sort by": "Sort by:",
   "By": "by",
   "Search": "Search",
@@ -40,5 +41,7 @@
   "Adminca": "Adminca",
   "The page is forbidden for you!": "The page is forbidden for you!",
   "Your feedback": "Your feedback",
-  "Thank you for feedback": "Thank you for feedback!"
+  "Thank you for feedback": "Thank you for feedback!",
+  "{{count}} views": "{{count}} views",
+  "{{count}} view": "{{count}} view"
 }

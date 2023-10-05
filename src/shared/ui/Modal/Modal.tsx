@@ -42,7 +42,7 @@ export const Modal = (props: ModalProps) => {
   if (lazy && !isMounted) return null;
 
   return (
-    <Portal>
+    <Portal element={document.getElementById('app') ?? document.body}>
       <div className={classNames(cls.Modal, mods, [className])}>
         <Overlay onClick={close} />
         <div

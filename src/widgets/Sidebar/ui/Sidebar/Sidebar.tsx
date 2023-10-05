@@ -45,6 +45,9 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
         collapsed={collapsed}
         className={cls.appLogo}
       />
+      <VStack role="navigation" gap="8" className={cls.items}>
+        {itemsList}
+      </VStack>
       <Icon
         Svg={ArrowIcon}
         data-testid="sidebar-toggle"
@@ -52,10 +55,6 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
         className={cls.collapseBtn}
         clickable
       />
-      <VStack role="navigation" gap="8" className={cls.items}>
-        {itemsList}
-      </VStack>
-
       <div className={cls.switchers}>
         <ThemeSwitcher />
         <LangSwitcher className={cls.lang} short={collapsed} />

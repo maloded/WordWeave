@@ -16,6 +16,7 @@ interface TextProps {
   variant?: TextVariant;
   align?: TextAlign;
   size?: TextSize;
+  bold?: boolean;
 
   'data-testid'?: string;
 }
@@ -23,9 +24,9 @@ interface TextProps {
 type HeaderTagType = 'h1' | 'h2' | 'h3';
 
 const mapSizeToClass: Record<TextSize, string> = {
-  s: 'size-s',
-  m: 'size-m',
-  l: 'size-l',
+  s: cls.size_s,
+  m: cls.size_m,
+  l: cls.size_l,
 };
 
 const mapSizeToHeaderTag: Record<TextSize, HeaderTagType> = {
@@ -42,6 +43,7 @@ export const Text = memo((props: TextProps) => {
     variant = 'primary',
     align = 'left',
     size = 'm',
+    bold = false,
     'data-testid': dataTestidId = 'Text',
   } = props;
 
@@ -51,7 +53,7 @@ export const Text = memo((props: TextProps) => {
   const addClasses = [className, cls[variant], cls[align], sizeClass];
 
   return (
-    <div className={classNames(cls.Text, {}, addClasses)}>
+    <div className={classNames(cls.Text, { [cls.bold]: bold }, addClasses)}>
       {title && (
         <HeaderTag
           className={cls.title}

@@ -7,6 +7,7 @@ import cls from './ArticleList.module.scss';
 import { ArticleView } from '../../model/consts/article';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
 import { Article } from '../../model/types/article';
+import { HStack } from '@/shared/ui/Stack';
 
 interface ArticleListProps {
   className?: string;
@@ -44,7 +45,9 @@ export const ArticleList = memo((props: ArticleListProps) => {
   }
 
   return (
-    <div
+    <HStack
+      gap="16"
+      wrap='wrap'
       className={classNames(cls.ArticleList, {}, [className, cls[view]])}
       data-testid="ArticleList"
     >
@@ -58,6 +61,6 @@ export const ArticleList = memo((props: ArticleListProps) => {
         />
       ))}
       {isLoading && getSkeletons(view)}
-    </div>
+    </HStack>
   );
 });

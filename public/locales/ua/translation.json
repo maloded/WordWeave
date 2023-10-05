@@ -23,6 +23,7 @@
   "Leave your comment here": "Залиште Ваш коментарій тут",
   "Close": "Закрити",
   "Send": "Відправити",
+  "Edit": "Виправити",
   "Sort by": "Сортувати по:",
   "By": "у",
   "Search": "Пошук",
@@ -40,5 +41,7 @@
   "Adminca": "Адмінка",
   "The page is forbidden for you!": "Сторінка є закритою для Вас!",
   "Your feedback": "Ваш відгук",
-  "Thank you for feedback": "Дякую за Ваш відгук!"
+  "Thank you for feedback": "Дякую за Ваш відгук!",
+  "{{count}} views": "{{count}} переглядів",
+  "{{count}} view": "{{count}} перегляд"
 }

@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, ReactNode, memo } from 'react';
+import { ButtonHTMLAttributes, ForwardedRef, ReactNode, forwardRef } from 'react';
 import { Mods, classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Button.module.scss';
 
@@ -12,13 +12,13 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   square?: boolean;
   size?: ButtonSize;
   color?: ButtonColor;
-  disabled?: boolean;
+  isDisabled?: boolean;
   fullWidth?: boolean;
   addonLeft?: ReactNode;
   addonRight?: ReactNode;
 }
 
-export const Button = memo((props: ButtonProps) => {
+export const Button = forwardRef((props: ButtonProps, ref: ForwardedRef<HTMLButtonElement>) => {
   const {
     className,
     children,
@@ -27,7 +27,7 @@ export const Button = memo((props: ButtonProps) => {
     size = 'm',
     color = 'normal',
     fullWidth,
-    disabled,
+    isDisabled,
     addonLeft,
     addonRight,
     ...otherProps
@@ -35,7 +35,7 @@ export const Button = memo((props: ButtonProps) => {
 
   const mods: Mods = {
     [cls.square]: square,
-    [cls.disabled]: disabled,
+    [cls.disabled]: isDisabled,
     [cls.fullWidth]: fullWidth,
     [cls.withAddon]: Boolean(addonLeft) || Boolean(addonRight),
   };
@@ -51,12 +51,16 @@ export const Button = memo((props: ButtonProps) => {
     <button
       type="button"
       className={classNames(cls.Button, mods, additional)}
-      disabled={disabled}
+      disabled={isDisabled}
       {...otherProps}
+      ref={ref}
     >
-      {/* <div className={cls.addonLeft}>{addonLeft}</div> */}
-      {children}
-      {/* <div className={cls.addonRight}>{addonRight}</div> */}
+      {/* eslint-disable-next-line */}
+      <>
+        <div className={cls.addonLeft}>{addonLeft}</div>
+        {children}
+        <div className={cls.addonRight}>{addonRight}</div>
+      </>
     </button>
   );
 });

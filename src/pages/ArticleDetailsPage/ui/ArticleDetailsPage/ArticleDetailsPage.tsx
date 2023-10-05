@@ -1,6 +1,5 @@
 import { memo } from 'react';
 import { useParams } from 'react-router-dom';
-import { ArticleDetails } from '@/entity/Article';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import {
   DynamicModuleLoader,
@@ -10,9 +9,11 @@ import { Page } from '@/widgets/Page';
 import { VStack } from '@/shared/ui/Stack';
 import { ArticleRecommendationsList } from '@/features/ArticleRecommendationsList';
 import { articleDetailsPageReducer } from '../../model/slices';
-import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments';
 import { ArticleRating } from '@/features/ArticleRating';
+import { StickyContentLayout } from '@/shared/layouts/StickyContentLayout';
+import { DetailsContainer } from '../DetailsContainer/DetailsContainer';
+import { AdditionalInfoContainer } from '../AdditionalInfoContainer/AdditionalInfoContainer';
 
 interface ArticleDetailsPageProps {
   className?: string;
@@ -34,15 +35,17 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <Page className={classNames('', {}, [className])} data-testid="ArticleDetails.Info">
-        <VStack gap="16" max>
-          <ArticleDetailsPageHeader />
-          <ArticleDetails id={id} />
-          <ArticleRating articleId={id} />
-          <ArticleRecommendationsList />
-          <ArticleDetailsComments id={id} />
-        </VStack>
-      </Page>
+      <StickyContentLayout
+        content={<Page className={classNames('', {}, [className])} data-testid="ArticleDetails.Info">
+          <VStack gap="16" max>
+            <DetailsContainer />
+            <ArticleRating articleId={id} />
+            <ArticleRecommendationsList />
+            <ArticleDetailsComments id={id} />
+          </VStack>
+        </Page>}
+        right={<AdditionalInfoContainer />}
+      />
     </DynamicModuleLoader>
   );
 };

@@ -18,6 +18,7 @@ import {
   addCommentFormReducer,
 } from '../../model/slices/addCommentFormSlice';
 import cls from './AddCommentForm.module.scss';
+import { Card } from '@/shared/ui/Card';
 
 export interface AddCommentFormProps {
   className?: string;
@@ -50,26 +51,29 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <HStack
-        data-testid="AddCommentForm"
-        justify="between"
-        max
-        className={classNames(cls.AddCommentForm, {}, [className])}
-      >
-        <Input
-          data-testid="AddCommentForm.Input"
-          className={cls.input}
-          placeholder={t('Leave your comment here')}
-          value={text}
-          onChange={onCommentTextChange}
-        />
-        <Button
-          data-testid="AddCommentForm.Button"
-          onClick={onSendHandler}
+      <Card padding="24" max border="round">
+        <HStack
+          data-testid="AddCommentForm"
+          justify="between"
+          max
+          gap="8"
+          className={classNames('', {}, [className])}
         >
-          {t('Send')}
-        </Button>
-      </HStack>
+          <Input
+            data-testid="AddCommentForm.Input"
+            className={cls.input}
+            placeholder={t('Leave your comment here')}
+            value={text}
+            onChange={onCommentTextChange}
+          />
+          <Button
+            data-testid="AddCommentForm.Button"
+            onClick={onSendHandler}
+          >
+            {t('Send')}
+          </Button>
+        </HStack>
+      </Card>
     </DynamicModuleLoader>
   );
 });

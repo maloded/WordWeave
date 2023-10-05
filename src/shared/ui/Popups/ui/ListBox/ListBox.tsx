@@ -2,11 +2,13 @@ import { Fragment, ReactNode, useMemo } from 'react';
 import { Listbox as HListBox } from '@headlessui/react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { DropdownDirection } from '@/shared/types/ui';
+import ArrowIcon from '@/shared/assets/icons/arrow-bottom.svg';
 import { HStack } from '../../../Stack';
 import { Button } from '../../../Button/Button';
 import cls from './ListBox.module.scss';
 import popupCls from '../../styles/popup.module.scss';
 import { mapDirectionClass } from '../../styles/consts';
+import { Icon } from '../../../Icon';
 
 export interface ListBoxItem<T extends string> {
   value: string;
@@ -51,10 +53,13 @@ export function ListBox<T extends string>(props: ListBoxProps<T>) {
         value={value}
         onChange={onChange}
       >
-        <HListBox.Button className={popupCls.trigger}>
-          <Button variant="filled" disabled={readonly}>
-            {selectedItem?.content ?? defaultValue}
-          </Button>
+        <HListBox.Button
+          as={Button}
+          variant="filled"
+          isDisabled={readonly}
+          addonRight={<Icon Svg={ArrowIcon} />}
+        >
+          {selectedItem?.content ?? defaultValue}
         </HListBox.Button>
         <HListBox.Options className={classNames(cls.options, {}, optionsClasses)}>
           {items?.map((item) => (
@@ -82,6 +87,6 @@ export function ListBox<T extends string>(props: ListBoxProps<T>) {
           ))}
         </HListBox.Options>
       </HListBox>
-    </HStack>
+    </HStack >
   );
 }
